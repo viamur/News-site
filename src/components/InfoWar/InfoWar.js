@@ -5,15 +5,36 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import s from './InfoWar.module.scss';
 
+/* import icon*/
+import airplane from '../../images/icon/war/airplane.svg';
+import artillery from '../../images/icon/war/artillery.svg';
+import bmp from '../../images/icon/war/bmp.svg';
+import helicopter from '../../images/icon/war/helicopter.svg';
+import rocket from '../../images/icon/war/rocket.svg';
+import soldiers from '../../images/icon/war/soldiers.svg';
+import tank from '../../images/icon/war/tank.svg';
+
+const icon = {
+  airplane,
+  artillery,
+  bmp,
+  helicopter,
+  rocket,
+  soldiers,
+  tank,
+};
+
 const InfoWar = () => {
   return (
     <section className={s.section}>
       <div className={s.wrap}>
-        <div className={s.leftInfo}>{infoWar.day} день війни:</div>
+        <div className={s.leftInfo}>
+          <p className={s.dayWar}>{infoWar.day} день війни:</p>
+        </div>
         <Swiper
           slidesPerView={'auto'}
           centeredSlides={false}
-          spaceBetween={24}
+          spaceBetween={40}
           pagination={{
             clickable: true,
           }}
@@ -23,7 +44,16 @@ const InfoWar = () => {
             {infoWar.info.map(el => {
               return (
                 <SwiperSlide key={el.id} className={s.swiperSlide}>
-                  {/* <img href={ } /> */}
+                  <img
+                    src={icon[el.icon]}
+                    alt={el.title}
+                    width={18}
+                    height={20}
+                    className={s.icon}
+                  />
+                  <p>
+                    {el.title} <span className={s.amount}>{el.amount}</span>
+                  </p>
                 </SwiperSlide>
               );
             })}

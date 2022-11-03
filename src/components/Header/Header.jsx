@@ -44,7 +44,7 @@ const Header = () => {
                   <option value={'ua'}>UA</option>
                   <option value={'ru'}>RU</option>
                 </select>
-                <svg className={s.svgBtnSelect} width={9} height={5}>
+                <svg className={s.svgBtnSelect} width={10} height={6}>
                   <use href={sprite + '#icon-' + 'select'}></use>
                 </svg>
               </div>

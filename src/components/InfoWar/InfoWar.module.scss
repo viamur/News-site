@@ -3,13 +3,19 @@
   height: 32px;
 
   background-color: #182840;
+  color: var(--white);
 }
 .wrap {
+  display: flex;
+
   width: 375px;
   margin: 0 auto;
 }
 
 .leftInfo {
+  position: absolute;
+  z-index: 5;
+
   display: flex;
   align-items: center;
 
@@ -21,5 +27,32 @@
   line-height: 1.15;
 
   background: linear-gradient(90deg, #182840 84.29%, rgba(24, 40, 64, 0) 100%);
-  color: var(--white);
+}
+.swiperSlide {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  margin-right: 16px;
+}
+.amount {
+  color: var(--primary-orange);
+}
+.swiper {
+  padding-left: 115px;
+  margin-right: -2px;
+  height: 32px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: var(--neutral);
+}
+.dayWar {
+  width: 90px;
+}
+.swiperSlide {
+  width: auto;
+  text-align: center;
 }

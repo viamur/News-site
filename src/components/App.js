@@ -1,5 +1,6 @@
 import Header from './Header/Header';
 import InfoWar from './InfoWar/InfoWar';
+import Hero from './Hero/Hero';
 
 import './App.scss';
 
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <main>
         <InfoWar />
+        <Hero />
       </main>
     </>
   );

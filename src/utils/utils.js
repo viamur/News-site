@@ -1,3 +1,8 @@
+import imgHero0 from '../images/hero/0.jpg';
+import imgHero1 from '../images/hero/1.png';
+import imgHero2 from '../images/hero/2.png';
+import imgHero3 from '../images/hero/3.png';
+
 /* Верхний перечень городов */
 export const region = [
   {
@@ -125,22 +130,22 @@ export const heroSlider = [
     id: 1,
     title:
       'Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б таке допускали, в нашій команді немає»',
-    img: '',
+    img: imgHero0,
   },
   {
     id: 2,
     title: 'Оприлюднено супутникові знімки аеродрому біля Новофедорівки: видно місця ураження',
-    img: '',
+    img: imgHero1,
   },
   {
     id: 3,
     title: 'Вибухи на білоруському аеродромі "Зябрівка": оприлюднені причини',
-    img: '',
+    img: imgHero2,
   },
   {
     id: 4,
     title: 'Сейм Латвії визнав рф країною-спонсором тероризму',
-    img: '',
+    img: imgHero3,
   },
 ];
 
