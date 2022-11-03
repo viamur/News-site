@@ -2,6 +2,7 @@ import Header from './Header/Header';
 import InfoWar from './InfoWar/InfoWar';
 import Hero from './Hero/Hero';
 import AllNews from './AllNews/AllNews';
+import ChoiceRedaction from './ChoiceRedaction/ChoiceRedaction';
 
 import './App.scss';
 
@@ -13,6 +14,7 @@ function App() {
         <InfoWar />
         <Hero />
         <AllNews />
+        <ChoiceRedaction />
       </main>
     </>
   );

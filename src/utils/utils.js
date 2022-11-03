@@ -3,6 +3,9 @@ import imgHero1 from '../images/hero/1.png';
 import imgHero2 from '../images/hero/2.png';
 import imgHero3 from '../images/hero/3.png';
 
+import choiceRedactors1 from '../images/news/all.png';
+import choiceRedactors2 from '../images/news/borch.png';
+
 /* Верхний перечень городов */
 export const region = [
   {
@@ -311,7 +314,7 @@ export const choiceRedactors = [
   {
     id: 1,
     title: 'Селезньов розповів, навіщо росіяни спустошують склади боєприпасів у Білорусі.',
-    img: '',
+    img: choiceRedactors1,
     time: '05 серпня 11:00',
     path: '/',
     accent: null,
@@ -319,18 +322,18 @@ export const choiceRedactors = [
   {
     id: 2,
     title: 'Білорусь несподівано вирішила провести військові навчання з Казахстаном: що відомо.',
-    img: '',
+    img: choiceRedactors2,
     time: '05 серпня 11:00',
     path: '/',
     accent: {
       title: 'Ексклюзив',
-      icon: 'exluziv',
+      icon: 'excluziv',
     },
   },
   {
     id: 3,
     title: 'Генерал Романенко оцінив бойовий потенціал і спроможності ворога на півдні України.',
-    img: '',
+    img: choiceRedactors1,
     time: '05 серпня 11:00',
     path: '/',
     accent: null,
@@ -338,7 +341,7 @@ export const choiceRedactors = [
   {
     id: 4,
     title: 'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.',
-    img: '',
+    img: choiceRedactors1,
     time: '05 серпня 11:00',
     path: '/',
     accent: null,
@@ -346,7 +349,7 @@ export const choiceRedactors = [
   {
     id: 5,
     title: 'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи.',
-    img: '',
+    img: choiceRedactors1,
     time: '05 серпня 11:00',
     path: '/',
     accent: null,
@@ -354,9 +357,13 @@ export const choiceRedactors = [
   {
     id: 6,
     title: 'Білорусь несподівано вирішила провести військові навчання з Казахстаном: що відомо.',
-    img: '',
+    img: choiceRedactors2,
     time: '05 серпня 11:00',
     path: '/',
+    accent: {
+      title: 'Ексклюзив',
+      icon: 'excluziv',
+    },
   },
 ];
 

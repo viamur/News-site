@@ -58,33 +58,7 @@
     }
   }
 }
-.btnGet {
-  display: flex;
-  justify-content: center;
 
-  width: 100%;
-  border-radius: 4px;
-  padding: 9px 60px 6px 60px;
-
-  background-color: transparent;
-  border: 1px solid #979ea9;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.4;
-  color: #182840;
-
-  transition: all var(--transition);
-  cursor: pointer;
-  &:hover,
-  &:focus {
-    background-color: var(--neutral);
-  }
-
-  &__svg {
-    margin-right: 8px;
-  }
-}
 .item {
   padding: 24px 0;
 }

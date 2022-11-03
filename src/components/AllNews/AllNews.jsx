@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Container from '../Container/Container';
-import { allNews, infoWar } from '../../utils/utils';
+import BtnLoadMore from '../BtnLoadMore/BtnLoadMore';
+import { allNews } from '../../utils/utils';
 import chunk from 'chunk';
 
 import sprite from '../../images/icon/sprite.svg';
@@ -103,14 +104,7 @@ const AllNews = () => {
             );
           })}
         </ul>
-        {chunkData.length !== page && (
-          <button type="button" className={s.btnGet} onClick={handleUpdateNews}>
-            <svg className={s.btnGet__svg} width={20} height={20}>
-              <use href={sprite + '#icon-' + 'refresh'}></use>
-            </svg>
-            Завантажити ще
-          </button>
-        )}
+        {chunkData.length !== page && <BtnLoadMore handleUpdateNews={handleUpdateNews} />}
       </Container>
     </section>
   );
