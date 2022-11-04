@@ -4,6 +4,7 @@ import Hero from './Hero/Hero';
 import AllNews from './AllNews/AllNews';
 import ChoiceRedaction from './ChoiceRedaction/ChoiceRedaction';
 import Regions from './Regions/Regions';
+import VideoSection from './VideoSection/VideoSection';
 
 import './App.scss';
 
@@ -17,6 +18,7 @@ function App() {
         <AllNews />
         <ChoiceRedaction />
         <Regions />
+        <VideoSection />
       </main>
     </>
   );

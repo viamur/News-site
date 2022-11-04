@@ -10,8 +10,7 @@ const Regions = () => {
   const [filter, setFilter] = useState('Kyiv');
   const [news, setNews] = useState([]);
 
-  const itemRef = useRef();
-  const translate = filter === 'Kyiv' ? 24 : filter === 'Kharkiv' ? -631 : -303;
+  const translate = filter === 'Kyiv' ? 24 : filter === 'Kharkiv' ? -623 : -295;
 
   useEffect(() => {
     /* Тут может быть гет запрос */
@@ -21,11 +20,6 @@ const Regions = () => {
   const handleChangeFilter = e => {
     e.preventDefault();
     const name = e.target.name;
-
-    if (name === 'Kharkiv') {
-      //   itemRef.current.style.translate = 300;
-      //   console.dir(itemRef.current);
-    }
 
     setFilter(name);
   };
@@ -72,11 +66,7 @@ const Regions = () => {
       <ul className={s.region__list}>
         {news.map(card => {
           return (
-            <li
-              className={s.region__item}
-              ref={itemRef}
-              style={{ transform: `translate(${translate}px)` }}
-            >
+            <li className={s.region__item} style={{ transform: `translate(${translate}px)` }}>
               <div>
                 <h4 className={s.region__title}>{card.name}</h4>
                 {card.news.map(el => {
