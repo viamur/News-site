@@ -37,17 +37,17 @@ const ChoiceRedaction = () => {
               <li key={el.id} className={s.item}>
                 <img src={el.img} alt={el.path} className={s.img} />
                 <div className={s.wrap}>
-                  <p>{el.time}</p>
+                  <p className={s.time}>{el.time}</p>
                   {el.accent && (
                     <>
-                      <svg className={s.accent__svg} width={16} height={16}>
+                      <svg className={s.accent__svg} width={18} height={20}>
                         <use href={sprite + '#icon-' + el.accent.icon}></use>
                       </svg>
-                      <p>{el.accent.title}</p>
+                      <p className={s.accent__title}>{el.accent.title}</p>
                     </>
                   )}
                 </div>
-                <Link>{el.title}</Link>
+                <Link className={s.news__title}>{el.title}</Link>
               </li>
             );
           })}

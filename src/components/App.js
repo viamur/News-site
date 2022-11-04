@@ -3,6 +3,7 @@ import InfoWar from './InfoWar/InfoWar';
 import Hero from './Hero/Hero';
 import AllNews from './AllNews/AllNews';
 import ChoiceRedaction from './ChoiceRedaction/ChoiceRedaction';
+import Regions from './Regions/Regions';
 
 import './App.scss';
 
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <AllNews />
         <ChoiceRedaction />
+        <Regions />
       </main>
     </>
   );
