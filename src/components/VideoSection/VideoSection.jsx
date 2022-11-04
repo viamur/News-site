@@ -2,17 +2,31 @@ import { useEffect, useState } from 'react';
 import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 import { videoBlock } from '../../utils/utils';
+import chunk from 'chunk';
 
 import sprite from '../../images/icon/sprite.svg';
 import s from './VideoSection.module.scss';
 
 const VideoSection = () => {
   const [news, setNews] = useState([]);
+  const [Allnews, setAllNews] = useState([[]]);
+  const [page, setPage] = useState(0);
 
   useEffect(() => {
     /* Подальшому тут можно GET запрос зробити і записати в стейт */
-    setNews(videoBlock);
+    const data = chunk(videoBlock, 5);
+    setAllNews(data);
+    setNews(data[0]);
   }, []);
+
+  const handleMoreNews = e => {
+    e.preventDefault();
+    /* Высыпаем пред массив и высыпаем след стр */
+    setNews(prev => [...prev, ...Allnews[page + 1]]);
+
+    /* Увеличиваем страницу +1 */
+    setPage(prev => prev + 1);
+  };
 
   return (
     <section className={s.section}>
@@ -37,9 +51,11 @@ const VideoSection = () => {
             );
           })}
         </ul>
-        <button type="button" className={s.btn}>
-          Більше
-        </button>
+        {Allnews.length !== page + 1 && (
+          <button type="button" className={s.btn} onClick={handleMoreNews}>
+            Більше
+          </button>
+        )}
       </Container>
     </section>
   );
