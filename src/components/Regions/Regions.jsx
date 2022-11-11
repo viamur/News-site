@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 import { regionNews } from '../../utils/utils';
+import Norserium from 'react-indiana-drag-scroll';
 
 import sprite from '../../images/icon/sprite.svg';
 import s from './Regions.module.scss';
@@ -11,6 +12,29 @@ const Regions = () => {
   const [news, setNews] = useState([]);
 
   const translate = filter === 'Kyiv' ? 24 : filter === 'Kharkiv' ? -623 : -295;
+
+  const listRef = useRef();
+  let isDown = false;
+  let scrollX;
+  let scrollLeft;
+
+  const handleMouseDown = e => {
+    e.preventDefault();
+    isDown = true;
+    scrollX = e.pageX - listRef.current.offsetLeft;
+    scrollLeft = listRef.current.scrollLeft;
+  };
+  const handleMouseUp = e => {
+    isDown = false;
+  };
+
+  const handleMouseMove = e => {
+    if (!isDown) return;
+    e.preventDefault();
+
+    let element = e.pageX - listRef.current.offsetLeft - scrollX;
+    listRef.current.scrollLeft = scrollLeft - element;
+  };
 
   useEffect(() => {
     /* Тут может быть гет запрос */
@@ -63,7 +87,15 @@ const Regions = () => {
           </li>
         </ul>
       </Container>
-      <ul className={s.region__list}>
+      {/* <Norserium> */}
+      <ul
+        className={s.region__list}
+        ref={listRef}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        onMouseMove={handleMouseMove}
+      >
         {news.map(card => {
           return (
             <li className={s.region__item} style={{ transform: `translate(${translate}px)` }}>
@@ -101,6 +133,7 @@ const Regions = () => {
           );
         })}
       </ul>
+      {/* </Norserium> */}
     </section>
   );
 };
