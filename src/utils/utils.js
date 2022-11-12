@@ -6,6 +6,16 @@ import imgHero3 from '../images/hero/3.png';
 import choiceRedactors1 from '../images/news/all.png';
 import choiceRedactors2 from '../images/news/borch.png';
 
+import imgVideo1 from '../images/video/1.png';
+import imgVideo2 from '../images/video/2.png';
+import imgVideo3 from '../images/video/3.png';
+import imgVideo4 from '../images/video/4.png';
+import imgVideo5 from '../images/video/5.png';
+
+import imgColonki1 from '../images/colonki/Avatar1.png';
+import imgColonki2 from '../images/colonki/Avatar2.png';
+import imgColonki3 from '../images/colonki/Avatar3.png';
+import imgColonki4 from '../images/colonki/Avatar4.png';
 /* Верхний перечень городов */
 export const region = [
   {
@@ -502,7 +512,7 @@ export const videoBlock = [
     id: 1,
     title: 'Це не Джошуа": Усик розповів, кого вважає своїм головним суперником',
     path: '',
-    imgURL: imgHero0,
+    imgURL: imgVideo1,
     date: '05 серпня 11:00',
   },
   {
@@ -510,7 +520,7 @@ export const videoBlock = [
     title:
       'Ватажок "ДНР" підтвердив підготовку самосуду над полоненими українськими військовими. Відео',
     path: '',
-    imgURL: imgHero0,
+    imgURL: imgVideo2,
     date: '05 серпня 11:00',
   },
   {
@@ -518,28 +528,28 @@ export const videoBlock = [
     title:
       '"Спекотні літні канікули": Міноборони України попередило росіян про наслідки відвідування Криму (відео)',
     path: '',
-    imgURL: imgHero0,
+    imgURL: imgVideo3,
     date: '05 серпня 11:00',
   },
   {
     id: 4,
     title: 'Під москвою палала військова частина, де проходять службу строковики (відео)',
     path: '',
-    imgURL: imgHero0,
+    imgURL: imgVideo4,
     date: '05 серпня 11:00',
   },
   {
     id: 5,
     title: 'СБУ затримала в Києві "військового експерта", який працював на росію (фото)',
     path: '',
-    imgURL: imgHero0,
+    imgURL: imgVideo5,
     date: '05 серпня 11:00',
   },
   {
     id: 6,
     title: 'Це не Джошуа": Усик розповів, кого вважає своїм головним суперником',
     path: '',
-    imgURL: imgHero0,
+    imgURL: imgVideo1,
     date: '05 серпня 11:00',
   },
 ];
@@ -552,7 +562,7 @@ export const kolonki = [
     date: '04 серпня 15:15',
     user: {
       name: 'Юлія Стахівська',
-      avatarURL: '',
+      avatarURL: imgColonki1,
       position: 'письменниця',
     },
   },
@@ -562,7 +572,7 @@ export const kolonki = [
     date: '04 серпня 15:15',
     user: {
       name: 'Юрій Андрухович',
-      avatarURL: '',
+      avatarURL: imgColonki2,
       position: 'письменник',
     },
   },
@@ -572,7 +582,7 @@ export const kolonki = [
     date: '04 серпня 15:15',
     user: {
       name: 'Анна Прокопенко',
-      avatarURL: '',
+      avatarURL: imgColonki3,
       position: 'журналістка',
     },
   },
@@ -582,7 +592,27 @@ export const kolonki = [
     date: '04 серпня 15:15',
     user: {
       name: 'Ірена Карпа',
-      avatarURL: '',
+      avatarURL: imgColonki4,
+      position: 'журналістка',
+    },
+  },
+  {
+    id: 5,
+    title: 'Щоденник війни. П`ятий тиждень довгого лютого',
+    date: '04 серпня 15:15',
+    user: {
+      name: 'Анна Прокопенко',
+      avatarURL: imgColonki3,
+      position: 'журналістка',
+    },
+  },
+  {
+    id: 6,
+    title: 'Не пощастило з географією. Небезпечний сусід',
+    date: '04 серпня 15:15',
+    user: {
+      name: 'Ірена Карпа',
+      avatarURL: imgColonki4,
       position: 'журналістка',
     },
   },

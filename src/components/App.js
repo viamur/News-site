@@ -5,9 +5,9 @@ import AllNews from './AllNews/AllNews';
 import ChoiceRedaction from './ChoiceRedaction/ChoiceRedaction';
 import Regions from './Regions/Regions';
 import VideoSection from './VideoSection/VideoSection';
+import Kolonki from './Colonki/Colonki';
 
 import './App.scss';
-import moment from 'moment';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <ChoiceRedaction />
         <Regions />
         <VideoSection />
+        <Kolonki />
       </main>
     </>
   );
