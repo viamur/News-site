@@ -1,4 +1,5 @@
 .header {
+  position: relative;
 }
 .top {
   padding: 16px 0;
@@ -22,8 +23,14 @@
   font-size: 14px;
   line-height: 16px;
 
+  transition: all var(--transition);
+
   background: #f7f7f7;
   color: #2d2d2d;
+  &:hover,
+  &:focus {
+    background: rgb(200 199 204 / 50%);
+  }
 }
 .svgBtnMenu {
   position: relative;
@@ -36,14 +43,35 @@
   margin: 0 auto;
 }
 .select {
+  position: relative;
+
   outline: none;
   border: none;
+  background: none;
+
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  &__svg {
+    margin-left: 5px;
+  }
 }
 .search {
   margin-right: 16px;
 
   border: none;
   background-color: transparent;
+  &__input {
+    border: none;
+    outline: none;
+
+    border-bottom: 1px solid grey;
+
+    width: 140px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .svgBtnSelect {
   position: absolute;
@@ -85,4 +113,23 @@
 .swiperSlide {
   width: auto;
   text-align: center;
+}
+.selector {
+  &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  &__item {
+    padding: 5px;
+    &:last-child {
+      padding-top: 0;
+    }
+  }
+  &__btn {
+    outline: none;
+    border: none;
+    background: none;
+  }
 }

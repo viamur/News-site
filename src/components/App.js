@@ -7,6 +7,7 @@ import Regions from './Regions/Regions';
 import VideoSection from './VideoSection/VideoSection';
 
 import './App.scss';
+import moment from 'moment';
 
 function App() {
   return (
