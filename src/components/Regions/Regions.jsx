@@ -11,42 +11,103 @@ const Regions = () => {
   const [filter, setFilter] = useState('Kyiv');
   const [news, setNews] = useState([]);
 
-  const translate = filter === 'Kyiv' ? 24 : filter === 'Kharkiv' ? -623 : -295;
-
-  const listRef = useRef();
-  let isDown = false;
-  let scrollX;
-  let scrollLeft;
-
-  const handleMouseDown = e => {
-    e.preventDefault();
-    isDown = true;
-    scrollX = e.pageX - listRef.current.offsetLeft;
-    scrollLeft = listRef.current.scrollLeft;
-  };
-  const handleMouseUp = e => {
-    isDown = false;
-  };
-
-  const handleMouseMove = e => {
-    if (!isDown) return;
-    e.preventDefault();
-
-    let element = e.pageX - listRef.current.offsetLeft - scrollX;
-    listRef.current.scrollLeft = scrollLeft - element;
-  };
-
   useEffect(() => {
     /* Тут может быть гет запрос */
     setNews(regionNews);
   }, []);
 
+  /* ................................................. .................................................
+  ..............Делаем скролл элементов с помощью мыши..................
+  ............................................................. ................................................. */
+
+  // Берем ссылку на элемент который будет скролить
+  const listRef = useRef();
+  let isDown = false;
+  let scrollX;
+  let scrollLeft;
+
+  // Функция при нажатие на тач срабатывает
+  const hadleTouchDown = e => {
+    isDown = true;
+    scrollX = e.changedTouches[0].pageX - listRef.current.offsetLeft;
+    scrollLeft = listRef.current.scrollLeft;
+  };
+
+  // Функция при нажатие мышки срабатывает
+  const handleMouseDown = e => {
+    e.preventDefault();
+    isDown = true;
+
+    /* 
+         e.pageX - положение нашей мышки по оси Х относительно всего документа 
+         listRef.current.offsetLeft - смещение относительно родителя в нашем случаи относительно окна браузера
+         listRef.current.scrollLeft - устанавливаем количество px на которое контент элемента прокручен влево
+    */
+
+    scrollX = e.pageX - listRef.current.offsetLeft;
+    scrollLeft = listRef.current.scrollLeft;
+  };
+
+  // При покидание нашего листа или при отжатие клавиши выполн функция
+  const handleMouseAndTouchUp = e => {
+    isDown = false;
+  };
+
+  // Для тача но не обязательно
+  const hadleTouchMove = e => {
+    if (!isDown) return;
+
+    let element = e.changedTouches[0].pageX - listRef.current.offsetLeft - scrollX;
+    const scrollLeftForList = scrollLeft - element;
+
+    if (scrollLeftForList < 143) setFilter('Kyiv');
+    if (scrollLeftForList > 143 && scrollLeftForList < 435) setFilter('Odessa');
+    if (scrollLeftForList > 435) setFilter('Kharkiv');
+
+    listRef.current.scrollLeft = scrollLeftForList;
+  };
+
+  // Слушаем движение мышки
+  const handleMouseMove = e => {
+    // Если небыла нажата мышка а мы перемещаем мышку то дальше функция не пройдет
+    if (!isDown) return;
+    e.preventDefault();
+
+    let element = e.pageX - listRef.current.offsetLeft - scrollX;
+    const scrollLeftForList = scrollLeft - element;
+
+    if (scrollLeftForList < 143) setFilter('Kyiv');
+    if (scrollLeftForList > 143 && scrollLeftForList < 435) setFilter('Odessa');
+    if (scrollLeftForList > 435) setFilter('Kharkiv');
+
+    listRef.current.scrollLeft = scrollLeftForList;
+  };
+
+  // Для скрола, можно на моб обоитись только им
+  const handleScroll = e => {
+    const scroll = e.target.scrollLeft;
+
+    if (scroll < 143) setFilter('Kyiv');
+    if (scroll > 143 && scroll < 435) setFilter('Odessa');
+    if (scroll > 435) setFilter('Kharkiv');
+  };
+
+  // Хендлер при нажатие на кнопки фильтр
   const handleChangeFilter = e => {
     e.preventDefault();
     const name = e.target.name;
-
+    if (name === 'Odessa') {
+      listRef.current.scrollLeft = 328;
+    }
+    if (name === 'Kharkiv') {
+      listRef.current.scrollLeft = 656;
+    }
+    if (name === 'Kyiv') {
+      listRef.current.scrollLeft = 0;
+    }
     setFilter(name);
   };
+
   return (
     <section className={s.section}>
       <Container>
@@ -87,24 +148,29 @@ const Regions = () => {
           </li>
         </ul>
       </Container>
-      {/* <Norserium> */}
       <ul
         className={s.region__list}
         ref={listRef}
+        onTouchMove={hadleTouchMove}
+        onTouchStart={hadleTouchDown}
+        onTouchEnd={handleMouseAndTouchUp}
         onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
+        onMouseUp={handleMouseAndTouchUp}
+        onMouseLeave={handleMouseAndTouchUp}
         onMouseMove={handleMouseMove}
+        onScroll={handleScroll}
       >
         {news.map(card => {
           return (
-            <li className={s.region__item} style={{ transform: `translate(${translate}px)` }}>
+            <li className={s.region__item} key={card.id}>
               <div>
                 <h4 className={s.region__title}>{card.name}</h4>
                 {card.news.map(el => {
                   return (
                     <>
-                      <p className={s.card__date}>{el.date}</p>
+                      <p className={s.card__date} key={el.id}>
+                        {el.date}
+                      </p>
                       <ul className={s.list__wrap}>
                         {el.dayNews.map(list => {
                           return (
@@ -133,7 +199,6 @@ const Regions = () => {
           );
         })}
       </ul>
-      {/* </Norserium> */}
     </section>
   );
 };

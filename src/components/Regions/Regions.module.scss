@@ -61,10 +61,17 @@
   &__list {
     display: flex;
     width: 375px;
+    padding-left: 24px;
+    padding-right: 40px;
 
-    overflow: hidden;
+    overflow: scroll hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0px 1.25rem;
 
     margin: 0 auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
   &__item {
     display: flex;
