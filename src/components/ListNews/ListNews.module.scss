@@ -1,0 +1,50 @@
+.item {
+  padding: 24px 0;
+}
+.item:not(:last-child) {
+  border-bottom: 1px solid #ebebeb;
+}
+.accent {
+  display: flex;
+
+  margin-bottom: 16px;
+
+  &__svg {
+    margin-right: 12px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    color: #979ea9;
+  }
+  &__titleColor {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    color: var(--primary-orange);
+  }
+}
+
+.news {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.38;
+
+  color: var(--primary-blue);
+  &__accent {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.38;
+
+    color: var(--primary-blue);
+  }
+}
+.time {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.42;
+  color: #707070;
+
+  margin-right: 13px;
+}

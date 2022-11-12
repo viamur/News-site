@@ -2,9 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 import { regionNews } from '../../utils/utils';
-import Norserium from 'react-indiana-drag-scroll';
+import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
 
-import sprite from '../../images/icon/sprite.svg';
 import s from './Regions.module.scss';
 
 const Regions = () => {
@@ -187,14 +186,7 @@ const Regions = () => {
                   );
                 })}
               </div>
-              <Link className={s.bottom__link}>
-                Більше новин
-                <span className={s.bottom__span}>
-                  <svg className={s.bottom__svg} width={16} height={16}>
-                    <use href={sprite + '#icon-' + 'arrowright'}></use>
-                  </svg>
-                </span>
-              </Link>
+              <MoreNewsBtn title={'Більше новин'} />
             </li>
           );
         })}

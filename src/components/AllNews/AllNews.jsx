@@ -5,8 +5,8 @@ import BtnLoadMore from '../BtnLoadMore/BtnLoadMore';
 import { allNews } from '../../utils/utils';
 import chunk from 'chunk';
 
-import sprite from '../../images/icon/sprite.svg';
 import s from './AllNews.module.scss';
+import ListNews from '../ListNews/ListNews';
 
 /* Количество отображаемых новостей */
 const quantity = 10;
@@ -84,26 +84,7 @@ const AllNews = () => {
             </button>
           </li>
         </ul>
-        <ul>
-          {news.map(el => {
-            return (
-              <li key={el.id} className={s.item}>
-                {el.accent && (
-                  <div className={s.accent}>
-                    <svg className={s.accent__svg} width={16} height={16}>
-                      <use href={sprite + '#icon-' + el.accent.icon}></use>
-                    </svg>
-                    <p className={s.accent__title}>{el.accent.title}</p>
-                  </div>
-                )}
-                <Link className={s.news}>
-                  <span className={s.time}>{el.time}</span>
-                  {el.title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <ListNews data={news} />
         {chunkData.length !== page && <BtnLoadMore handleUpdateNews={handleUpdateNews} />}
       </Container>
     </section>

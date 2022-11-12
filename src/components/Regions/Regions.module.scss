@@ -129,29 +129,3 @@
     margin-right: 13px;
   }
 }
-.bottom {
-  &__link {
-    display: flex;
-    align-items: center;
-    margin-top: 24px;
-
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.4;
-    color: var(--primary-blue);
-  }
-  &__span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 32px;
-    height: 32px;
-    margin-left: 16px;
-
-    border-radius: 50%;
-    border: 1px solid #979ea9;
-  }
-  &__svg {
-  }
-}

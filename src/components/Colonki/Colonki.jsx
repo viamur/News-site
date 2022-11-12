@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { kolonki } from '../../utils/utils';
+
+import '@splidejs/react-splide/css';
 import s from './Colonki.module.scss';
 
 const Kolonki = () => {
@@ -18,10 +21,22 @@ const Kolonki = () => {
         <h2 className={s.title}>Колонки</h2>
         <Link className={s.link}>Всі колонки</Link>
       </div>
-      <ul className={s.list}>
+      <Splide
+        aria-label="Колонки"
+        className={s.slider}
+        options={{
+          rewind: false,
+          width: '375px',
+          autoWidth: true,
+          pagination: false,
+          arrows: false,
+        }}
+      >
+        {/* <ul className={s.list}> */}
         {colonki.map(el => {
           return (
-            <li key={el.id} className={s.item}>
+            <SplideSlide key={el.id} className={s.item} tag={'li'}>
+              {/* <li key={el.id} className={s.item}> */}
               <div className={s.block}>
                 <img
                   src={el.user.avatarURL}
@@ -37,10 +52,12 @@ const Kolonki = () => {
               </div>
               <p className={s.text}>{el.title}</p>
               <p className={s.date}>{el.date}</p>
-            </li>
+              {/* </li> */}
+            </SplideSlide>
           );
         })}
-      </ul>
+        {/* </ul> */}
+      </Splide>
     </section>
   );
 };
