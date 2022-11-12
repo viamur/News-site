@@ -115,19 +115,14 @@
   text-align: center;
 }
 .selector {
-  &__list {
+  &__btn {
     position: absolute;
-    top: 0;
+    bottom: -80%;
     left: 0;
     z-index: 10;
-  }
-  &__item {
+
     padding: 5px;
-    &:last-child {
-      padding-top: 0;
-    }
-  }
-  &__btn {
+
     outline: none;
     border: none;
     background: none;

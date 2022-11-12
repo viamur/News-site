@@ -73,28 +73,14 @@ const Header = () => {
                   <use href={sprite + '#icon-' + 'select'}></use>
                 </svg>
                 {isOpenSelector && (
-                  <ul className={s.selector__list}>
-                    <li className={s.selector__item}>
-                      <button
-                        className={s.selector__btn}
-                        name={lang === 'UA' ? 'UA' : 'EN'}
-                        type="button"
-                        onClick={handleChangeLang}
-                      >
-                        {lang === 'UA' ? 'UA' : 'EN'}
-                      </button>
-                    </li>
-                    <li className={s.selector__item}>
-                      <button
-                        className={s.selector__btn}
-                        name={lang !== 'UA' ? 'UA' : 'EN'}
-                        type="button"
-                        onClick={handleChangeLang}
-                      >
-                        {lang !== 'UA' ? 'UA' : 'EN'}
-                      </button>
-                    </li>
-                  </ul>
+                  <button
+                    className={s.selector__btn}
+                    name={lang !== 'UA' ? 'UA' : 'EN'}
+                    type="button"
+                    onClick={handleChangeLang}
+                  >
+                    {lang !== 'UA' ? 'UA' : 'EN'}
+                  </button>
                 )}
               </button>
             </div>
