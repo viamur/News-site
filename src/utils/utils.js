@@ -16,6 +16,8 @@ import imgColonki1 from '../images/colonki/Avatar1.png';
 import imgColonki2 from '../images/colonki/Avatar2.png';
 import imgColonki3 from '../images/colonki/Avatar3.png';
 import imgColonki4 from '../images/colonki/Avatar4.png';
+
+import imgPromoDemo from '../images/promo/demo.png';
 /* Верхний перечень городов */
 export const region = [
   {
@@ -761,37 +763,57 @@ export const promoSlider = [
   {
     id: 1,
     title: 'Акція! Телевізори Samsung з вигодою та в оплату частинами до 12 платежів',
-    imgURL: '',
+    imgURL: imgPromoDemo,
     path: '/',
     date: '05 серпня 11:00',
+    accent: {
+      title: 'Промо',
+      icon: 'megaphone',
+    },
   },
   {
     id: 2,
     title: 'Замовте нові флагмани Samsung Galaxy Fold4|Flip4 і отримуйте подарунки',
-    imgURL: '',
+    imgURL: imgVideo4,
     path: '/',
     date: '05 серпня 11:00',
+    accent: {
+      title: 'Промо',
+      icon: 'megaphone',
+    },
   },
   {
     id: 3,
     title: 'Зустрічай нову серію смартфонів та навушників від Samsung',
-    imgURL: '',
+    imgURL: imgPromoDemo,
     path: '/',
     date: '05 серпня 11:00',
+    accent: {
+      title: 'Промо',
+      icon: 'megaphone',
+    },
   },
   {
     id: 4,
     title: 'Мобільний телефон Xiaomi Redmi 9C 3/64GB',
-    imgURL: '',
+    imgURL: imgVideo4,
     path: '/',
     date: '05 серпня 11:00',
+    accent: {
+      title: 'Промо',
+      icon: 'megaphone',
+    },
   },
   {
     id: 5,
     title: 'Зустрічай нову серію смартфонів та навушників від Samsung',
-    imgURL: '',
+    imgURL: imgPromoDemo,
     path: '/',
     date: '05 серпня 11:00',
+    accent: {
+      title: 'Промо',
+      icon: 'megaphone',
+    },
   },
 ];
 
