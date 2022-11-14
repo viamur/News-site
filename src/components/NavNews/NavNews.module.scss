@@ -1,0 +1,32 @@
+.list {
+  display: flex;
+
+  margin-bottom: 8px;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+  &__btn {
+    padding: 4px 8px 2px 8px;
+    border-radius: 4px;
+
+    background-color: transparent;
+    color: #919191;
+    border: none;
+
+    transition: all var(--transition);
+    cursor: pointer;
+    &Active,
+    &:hover,
+    &:focus {
+      padding: 4px 8px 2px 8px;
+      border-radius: 4px;
+
+      border: none;
+      cursor: pointer;
+
+      color: var(--primary-orange);
+      background-color: #ffeae0;
+    }
+  }
+}

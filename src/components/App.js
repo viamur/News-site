@@ -11,6 +11,7 @@ import BetweenSection from './BetweenSection/BetweenSection';
 import Promo from './Promo/Promo';
 
 import './App.scss';
+import Economica from './Economica/Economica';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         <Polituka />
         <BetweenSection />
         <Promo />
+        <BetweenSection />
+        <Economica />
+        <BetweenSection />
       </main>
     </>
   );
