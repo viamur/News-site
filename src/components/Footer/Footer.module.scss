@@ -4,3 +4,148 @@
 
   background-color: var(--grey-bg);
 }
+.accordion {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  &__summary {
+    padding: 4px 16px !important;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+}
+.list {
+  margin-bottom: 40px;
+}
+.item {
+  border-bottom: 1px solid #dedfe0;
+  border-radius: 2px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+
+    padding: 16px;
+  }
+}
+.submenu {
+  &__item {
+    padding-left: 16px;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.38;
+    color: #515151;
+  }
+}
+
+/* Второе меню */
+
+.secondMenu {
+  margin-bottom: 40px;
+  &__item {
+    margin-bottom: 24px;
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-color);
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Соцсети */
+.soc {
+  padding-bottom: 40px;
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--text-color);
+
+    margin-bottom: 24px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    height: 115px;
+  }
+  &__item {
+    width: 50%;
+
+    &:nth-child(-n + 3) {
+      margin-right: 24px;
+    }
+    &:not(:nth-child(3n)) {
+      margin-bottom: 24px;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    color: #434343;
+  }
+}
+
+/* Боттом блок */
+.bottom {
+  position: relative;
+  padding-top: 32px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    text-align: center;
+    text-transform: uppercase;
+    color: #515151;
+
+    margin-bottom: 24px;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    text-align: center;
+    color: #919191;
+  }
+}

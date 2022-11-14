@@ -24,6 +24,13 @@ import imgLifeStyle2 from '../images/lifestyle/2.png';
 import imgLifeStyle3 from '../images/lifestyle/3.png';
 import imgLifeStyle4 from '../images/lifestyle/4.png';
 
+import iconSocGoogleNews from '../images/icon/soc/goggleNews.svg';
+import iconSocFB from '../images/icon/soc/fb.svg';
+import iconSocInstagram from '../images/icon/soc/inst.svg';
+import iconSocTelegram from '../images/icon/soc/teleg.svg';
+import iconSocTikTok from '../images/icon/soc/tiktok.svg';
+import iconSocYouTube from '../images/icon/soc/youtube.svg';
+
 /* Верхний перечень городов */
 export const region = [
   {
@@ -1345,36 +1352,36 @@ export const socList = [
     id: 1,
     title: 'YouTube',
     link: 'https://www.youtube.com/',
-    icon: 'youtube',
+    icon: iconSocYouTube,
   },
   {
     id: 2,
     title: 'Telegram',
     link: 'https://www.youtube.com/',
-    icon: 'telegram',
+    icon: iconSocTelegram,
   },
   {
     id: 3,
     title: 'Instagram',
     link: 'https://www.instagram.com/',
-    icon: 'instagram',
+    icon: iconSocInstagram,
   },
   {
     id: 4,
     title: 'Facebook',
     link: 'https://www.facebook.com/',
-    icon: 'facebook',
+    icon: iconSocFB,
   },
   {
     id: 5,
     title: 'TikTok',
     link: 'https://www.tiktok.com/uk-UA/',
-    icon: 'tiktok',
+    icon: iconSocTikTok,
   },
   {
     id: 6,
     title: 'Google News',
     link: 'https://news.google.com/home?hl=ru&gl=UA&ceid=UA:ru',
-    icon: 'google-news',
+    icon: iconSocGoogleNews,
   },
 ];
