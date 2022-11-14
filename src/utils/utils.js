@@ -170,7 +170,7 @@ export const allNews = [
     id: 1,
     title:
       'Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: {
@@ -182,7 +182,7 @@ export const allNews = [
   {
     id: 2,
     title: 'До Європи за захистом. Що означає позов Ахметова до Європейського суду з прав людини',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     accentcolor: true,
     category: 'news',
     accent: null,
@@ -190,7 +190,7 @@ export const allNews = [
   {
     id: 3,
     title: 'Прем`єрка Швеції відвідала потрощені росіянами Бучу й Бородянку: реакція на побачене',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'articles',
     accent: null,
@@ -198,7 +198,7 @@ export const allNews = [
   {
     id: 4,
     title: 'До Європи за захистом. Що означає позов Ахметова до Європейського суду з прав людини',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'articles',
     accent: {
@@ -210,7 +210,7 @@ export const allNews = [
   {
     id: 5,
     title: 'Стало відомо, коли ЄС може узгодити сьомий пакет санкцій проти рф',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'articles',
     accent: null,
@@ -218,7 +218,7 @@ export const allNews = [
   {
     id: 6,
     title: 'До Європи за захистом. Що означає позов Ахметова до Європейського суду з прав людини',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'articles',
     accent: null,
@@ -227,7 +227,7 @@ export const allNews = [
     id: 7,
     title:
       'Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: null,
@@ -235,7 +235,7 @@ export const allNews = [
   {
     id: 8,
     title: 'Дружина Зеленського чесно зізналася, чи боїться смерті',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: null,
@@ -243,7 +243,7 @@ export const allNews = [
   {
     id: 9,
     title: 'Бийся на світлій стороні": як спортсмени, меценати й волонетри рятують життя українців',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: null,
@@ -251,7 +251,7 @@ export const allNews = [
   {
     id: 10,
     title: 'Бийся на світлій стороні": як спортсмени, меценати й волонетри рятують життя українців',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'articles',
     accent: null,
@@ -260,7 +260,7 @@ export const allNews = [
     id: 11,
     title:
       'Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'articles',
     accent: null,
@@ -268,7 +268,7 @@ export const allNews = [
   {
     id: 12,
     title: 'До Європи за захистом. Що означає позов Ахметова до Європейського суду з прав людини',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: true,
     category: 'articles',
     accent: null,
@@ -276,7 +276,7 @@ export const allNews = [
   {
     id: 13,
     title: 'Прем`єрка Швеції відвідала потрощені росіянами Бучу й Бородянку: реакція на побачене',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: null,
@@ -284,7 +284,7 @@ export const allNews = [
   {
     id: 14,
     title: 'До Європи за захистом. Що означає позов Ахметова до Європейського суду з прав людини',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: {
@@ -296,7 +296,7 @@ export const allNews = [
   {
     id: 15,
     title: 'Стало відомо, коли ЄС може узгодити сьомий пакет санкцій проти рф',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: null,
@@ -304,7 +304,7 @@ export const allNews = [
   {
     id: 16,
     title: 'До Європи за захистом. Що означає позов Ахметова до Європейського суду з прав людини',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: null,
@@ -313,7 +313,7 @@ export const allNews = [
     id: 17,
     title:
       'Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: null,
@@ -321,7 +321,7 @@ export const allNews = [
   {
     id: 18,
     title: 'Дружина Зеленського чесно зізналася, чи боїться смерті',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: null,
@@ -329,7 +329,7 @@ export const allNews = [
   {
     id: 19,
     title: 'Бийся на світлій стороні": як спортсмени, меценати й волонетри рятують життя українців',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: null,
@@ -337,7 +337,7 @@ export const allNews = [
   {
     id: 20,
     title: 'Бийся на світлій стороні": як спортсмени, меценати й волонетри рятують життя українців',
-    time: '14:58',
+    time: '2022-08-05 14:59:00',
     accentcolor: false,
     category: 'news',
     accent: null,
@@ -350,7 +350,7 @@ export const choiceRedactors = [
     id: 1,
     title: 'Селезньов розповів, навіщо росіяни спустошують склади боєприпасів у Білорусі.',
     img: choiceRedactors1,
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     path: '/',
     accent: null,
   },
@@ -358,7 +358,7 @@ export const choiceRedactors = [
     id: 2,
     title: 'Білорусь несподівано вирішила провести військові навчання з Казахстаном: що відомо.',
     img: choiceRedactors2,
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     path: '/',
     accent: {
       title: 'Ексклюзив',
@@ -370,7 +370,7 @@ export const choiceRedactors = [
     id: 3,
     title: 'Генерал Романенко оцінив бойовий потенціал і спроможності ворога на півдні України.',
     img: choiceRedactors1,
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     path: '/',
     accent: null,
   },
@@ -378,7 +378,7 @@ export const choiceRedactors = [
     id: 4,
     title: 'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.',
     img: choiceRedactors1,
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     path: '/',
     accent: null,
   },
@@ -386,7 +386,7 @@ export const choiceRedactors = [
     id: 5,
     title: 'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи.',
     img: choiceRedactors1,
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     path: '/',
     accent: null,
   },
@@ -394,7 +394,7 @@ export const choiceRedactors = [
     id: 6,
     title: 'Білорусь несподівано вирішила провести військові навчання з Казахстаном: що відомо.',
     img: choiceRedactors2,
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     path: '/',
     accent: {
       title: 'Ексклюзив',
@@ -413,16 +413,16 @@ export const regionNews = [
     news: [
       {
         id: 1,
-        date: '05 серпня',
+        date: '2022-08-05 14:59:00',
         dayNews: [
           {
             id: 1,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title: 'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи',
           },
           {
             id: 2,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title:
               'На Київщині загиблого під час окупації чоловіка знайшли у колодязі: його прикмети',
           },
@@ -430,21 +430,21 @@ export const regionNews = [
       },
       {
         id: 2,
-        date: '04 серпня',
+        date: '2022-08-04 14:59:00',
         dayNews: [
           {
             id: 1,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title: 'КМДА контролюватиме якість підготовки до опалювального сезону',
           },
           {
             id: 2,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title: 'Дружина Зеленського чесно зізналася, чи боїться смерті',
           },
           {
             id: 3,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title: 'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи',
           },
         ],
@@ -458,32 +458,32 @@ export const regionNews = [
     news: [
       {
         id: 1,
-        date: '05 серпня',
+        date: '2022-08-05 14:59:00',
         dayNews: [
           {
             id: 1,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title:
               'Ремонт зруйнованого російськими ракетами будинку у Сергіївці коштуватиме понад 40 млн гривень',
           },
           {
             id: 2,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title: 'На Одещині рибалки незаконно наловили раків на 8 млн гривень',
           },
           {
             id: 3,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title: 'Екіпаж турецького судна вперше з початку війни повернувся з Одеси додому',
           },
           {
             id: 4,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title: 'Дружина Зеленського чесно зізналася, чи боїться смерті',
           },
           {
             id: 5,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title:
               'Ремонт зруйнованого російськими ракетами будинку у Сергіївці коштуватиме понад 40 млн гривень',
           },
@@ -498,33 +498,33 @@ export const regionNews = [
     news: [
       {
         id: 1,
-        date: '05 серпня',
+        date: '2022-08-05 14:59:00',
         dayNews: [
           {
             id: 1,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title:
               'Обстріл Павлова Поля у Харкові: уламки прилетіли до квартир, троє людей поранено',
           },
           {
             id: 2,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title: 'Дружина Зеленського чесно зізналася, чи боїться смерті',
           },
           {
             id: 3,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title:
               'Обстріл Павлова Поля у Харкові: уламки прилетіли до квартир, троє людей поранено',
           },
           {
             id: 4,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title: 'ЗСУ пересунули лінію фронту на Харківщині: окупанти тікали, кидаючи техніку',
           },
           {
             id: 5,
-            time: '14:59',
+            time: '2022-08-05 14:59:00',
             title: 'На Харківщині, попри щоденні обстріли, тривають жнива: скільки врожаю зібрали',
           },
         ],
@@ -540,7 +540,7 @@ export const videoBlock = [
     title: 'Це не Джошуа": Усик розповів, кого вважає своїм головним суперником',
     path: '',
     imgURL: imgVideo1,
-    date: '05 серпня 11:00',
+    date: '2022-08-05 14:59:00',
   },
   {
     id: 2,
@@ -548,7 +548,7 @@ export const videoBlock = [
       'Ватажок "ДНР" підтвердив підготовку самосуду над полоненими українськими військовими. Відео',
     path: '',
     imgURL: imgVideo2,
-    date: '05 серпня 11:00',
+    date: '2022-08-05 14:59:00',
   },
   {
     id: 3,
@@ -556,28 +556,28 @@ export const videoBlock = [
       '"Спекотні літні канікули": Міноборони України попередило росіян про наслідки відвідування Криму (відео)',
     path: '',
     imgURL: imgVideo3,
-    date: '05 серпня 11:00',
+    date: '2022-08-05 14:59:00',
   },
   {
     id: 4,
     title: 'Під москвою палала військова частина, де проходять службу строковики (відео)',
     path: '',
     imgURL: imgVideo4,
-    date: '05 серпня 11:00',
+    date: '2022-08-05 14:59:00',
   },
   {
     id: 5,
     title: 'СБУ затримала в Києві "військового експерта", який працював на росію (фото)',
     path: '',
     imgURL: imgVideo5,
-    date: '05 серпня 11:00',
+    date: '2022-08-05 14:59:00',
   },
   {
     id: 6,
     title: 'Це не Джошуа": Усик розповів, кого вважає своїм головним суперником',
     path: '',
     imgURL: imgVideo1,
-    date: '05 серпня 11:00',
+    date: '2022-08-05 14:59:00',
   },
 ];
 
@@ -586,7 +586,7 @@ export const kolonki = [
   {
     id: 1,
     title: 'Жінок в часи небезпеки приваблюють сильні чоловіки',
-    date: '04 серпня 15:15',
+    date: '2022-08-14 15:15:00',
     user: {
       name: 'Юлія Стахівська',
       avatarURL: imgColonki1,
@@ -596,7 +596,7 @@ export const kolonki = [
   {
     id: 2,
     title: 'Штайнмаєр - людина-формула',
-    date: '04 серпня 15:15',
+    date: '2022-08-14 15:15:00',
     user: {
       name: 'Юрій Андрухович',
       avatarURL: imgColonki2,
@@ -606,7 +606,7 @@ export const kolonki = [
   {
     id: 3,
     title: 'Щоденник війни. П`ятий тиждень довгого лютого',
-    date: '04 серпня 15:15',
+    date: '2022-08-14 15:15:00',
     user: {
       name: 'Анна Прокопенко',
       avatarURL: imgColonki3,
@@ -616,7 +616,7 @@ export const kolonki = [
   {
     id: 4,
     title: 'Не пощастило з географією. Небезпечний сусід',
-    date: '04 серпня 15:15',
+    date: '2022-08-14 15:15:00',
     user: {
       name: 'Ірена Карпа',
       avatarURL: imgColonki4,
@@ -626,7 +626,7 @@ export const kolonki = [
   {
     id: 5,
     title: 'Щоденник війни. П`ятий тиждень довгого лютого',
-    date: '04 серпня 15:15',
+    date: '2022-08-14 15:15:00',
     user: {
       name: 'Анна Прокопенко',
       avatarURL: imgColonki3,
@@ -636,7 +636,7 @@ export const kolonki = [
   {
     id: 6,
     title: 'Не пощастило з географією. Небезпечний сусід',
-    date: '04 серпня 15:15',
+    date: '2022-08-14 15:15:00',
     user: {
       name: 'Ірена Карпа',
       avatarURL: imgColonki4,
@@ -650,7 +650,7 @@ export const politika = [
   {
     id: 1,
     title: 'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.',
-    time: '14:58',
+    time: '2022-08-05 14:58:00',
     category: 'news',
     accentcolor: false,
     imgURL: '',
@@ -660,7 +660,7 @@ export const politika = [
   {
     id: 2,
     title: 'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.',
-    time: '14:58',
+    time: '2022-08-05 14:58:00',
     category: 'news',
     accentcolor: false,
     imgURL: '',
@@ -670,7 +670,7 @@ export const politika = [
   {
     id: 3,
     title: 'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи',
-    time: '14:58',
+    time: '2022-08-05 14:58:00',
     category: 'news',
     accentcolor: false,
     imgURL: '',
@@ -680,7 +680,7 @@ export const politika = [
   {
     id: 4,
     title: 'До Європи за захистом. Що означає позов Ахметова до Європейського суду з прав людини',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     category: 'news',
     accentcolor: true,
     accent: {
@@ -694,7 +694,7 @@ export const politika = [
   {
     id: 5,
     title: 'Стало відомо, коли ЄС може узгодити сьомий пакет санкцій проти рф',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     category: 'news',
     accentcolor: false,
     imgURL: '',
@@ -704,7 +704,7 @@ export const politika = [
   {
     id: 6,
     title: 'До Європи за захистом. Що означає позов Ахметова до Європейського суду з прав людини',
-    time: '14:58',
+    time: '2022-08-05 14:58:00',
     category: 'articles',
     accentcolor: false,
     imgURL: '',
@@ -719,7 +719,7 @@ export const politika = [
     id: 7,
     title:
       '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано',
-    time: '14:58',
+    time: '2022-08-05 14:58:00',
     category: 'articles',
     accentcolor: false,
     imgURL: '',
@@ -731,7 +731,7 @@ export const politika = [
     id: 8,
     title:
       '"Бийся на світлій стороні": як спортсмени, меценати й волонетри рятують життя українців',
-    time: '14:58',
+    time: '2022-08-05 14:58:00',
     category: 'news',
     accentcolor: false,
     imgURL: '',
@@ -741,7 +741,7 @@ export const politika = [
   {
     id: 9,
     title: 'Дружина Зеленського чесно зізналася, чи боїться смерті',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     category: 'news',
     accentcolor: false,
     imgURL: '',
@@ -751,7 +751,7 @@ export const politika = [
   {
     id: 10,
     title: 'Бийся на світлій стороні": як спортсмени, меценати й волонетри рятують життя українців',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     category: 'news',
     accentcolor: false,
     imgURL: '',
@@ -767,7 +767,7 @@ export const promoSlider = [
     title: 'Акція! Телевізори Samsung з вигодою та в оплату частинами до 12 платежів',
     imgURL: imgPromoDemo,
     path: '/',
-    date: '05 серпня 11:00',
+    date: '2022-08-05 11:00:00',
     accent: {
       title: 'Промо',
       icon: 'megaphone',
@@ -778,7 +778,7 @@ export const promoSlider = [
     title: 'Замовте нові флагмани Samsung Galaxy Fold4|Flip4 і отримуйте подарунки',
     imgURL: imgPromoDemo,
     path: '/',
-    date: '05 серпня 11:00',
+    date: '2022-08-05 11:00:00',
     accent: {
       title: 'Промо',
       icon: 'megaphone',
@@ -789,7 +789,7 @@ export const promoSlider = [
     title: 'Зустрічай нову серію смартфонів та навушників від Samsung',
     imgURL: imgPromoDemo,
     path: '/',
-    date: '05 серпня 11:00',
+    date: '2022-08-05 11:00:00',
     accent: {
       title: 'Промо',
       icon: 'megaphone',
@@ -800,7 +800,7 @@ export const promoSlider = [
     title: 'Мобільний телефон Xiaomi Redmi 9C 3/64GB',
     imgURL: imgPromoDemo,
     path: '/',
-    date: '05 серпня 11:00',
+    date: '2022-08-05 11:00:00',
     accent: {
       title: 'Промо',
       icon: 'megaphone',
@@ -811,7 +811,7 @@ export const promoSlider = [
     title: 'Зустрічай нову серію смартфонів та навушників від Samsung',
     imgURL: imgPromoDemo,
     path: '/',
-    date: '05 серпня 11:00',
+    date: '2022-08-05 11:00:00',
     accent: {
       title: 'Промо',
       icon: 'megaphone',
@@ -824,7 +824,7 @@ export const ecomica = [
   {
     id: 1,
     title: 'McDonald’s відновлює роботу ресторанів в Україні: де відкриються перші',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 11:00:00',
     category: 'news',
     img: choiceRedactors1,
     path: '/',
@@ -837,7 +837,7 @@ export const ecomica = [
   {
     id: 2,
     title: 'Рада готує новий податковий сюрприз для обмінників: Гетманцев дав роз`яснення',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 11:00:00',
     category: 'news',
     img: choiceRedactors2,
     path: '/',
@@ -850,7 +850,7 @@ export const ecomica = [
   {
     id: 3,
     title: 'Росія хоче перемкнути Запорізьку АЕС на Крим: експерт пояснив шанси і ризики',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 11:00:00',
     category: 'news',
     img: choiceRedactors1,
     path: '/',
@@ -863,7 +863,7 @@ export const ecomica = [
   {
     id: 4,
     title: 'Як Ощадбанк під час війни безперебійно підтримує аграріїв',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 11:00:00',
     category: 'news',
     img: choiceRedactors1,
     path: '/',
@@ -876,7 +876,7 @@ export const ecomica = [
   {
     id: 5,
     title: 'Переселенці зможуть отримувати виплати навіть у разі втрати паспорта: що відомо',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 11:00:00',
     category: 'news',
     img: choiceRedactors2,
     path: '/',
@@ -889,7 +889,7 @@ export const ecomica = [
   {
     id: 6,
     title: 'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 11:00:00',
     category: 'articles',
     img: choiceRedactors2,
     path: '/',
@@ -902,7 +902,7 @@ export const ecomica = [
   {
     id: 7,
     title: 'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 11:00:00',
     category: 'articles',
     img: choiceRedactors1,
     path: '/',
@@ -916,7 +916,7 @@ export const ecomica = [
   {
     id: 8,
     title: 'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 11:00:00',
     category: 'news',
     img: choiceRedactors1,
     path: '/',
@@ -929,7 +929,7 @@ export const ecomica = [
   {
     id: 9,
     title: 'Дружина Зеленського чесно зізналася, чи боїться смерті',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 11:00:00',
     category: 'articles',
     img: choiceRedactors1,
     path: '/',
@@ -942,7 +942,7 @@ export const ecomica = [
   {
     id: 10,
     title: 'Бийся на світлій стороні": як спортсмени, меценати й волонетри рятують життя українців',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 11:00:00',
     category: 'articles',
     img: choiceRedactors1,
     path: '/',
@@ -959,31 +959,29 @@ export const lifeStyle = [
   {
     id: 1,
     title: 'Селезньов розповів, навіщо росіяни спустошують склади боєприпасів у Білорусі',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     category: 'news',
     imgURL: '',
     path: '/',
     accent: {
       title: 'Інтерв’ю',
-      icon: 'interv',
+      icon: 'microphone',
+      accentcolor: false,
     },
   },
   {
     id: 2,
     title: 'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     category: 'news',
     imgURL: '',
     path: '/',
-    accent: {
-      title: 'Онлайн',
-      icon: 'srss',
-    },
+    accent: false,
   },
   {
     id: 3,
     title: 'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     category: 'news',
     imgURL: '',
     path: '/',
@@ -992,7 +990,7 @@ export const lifeStyle = [
   {
     id: 4,
     title: 'Що подивитися ввечері: топ-5 українських фільмів',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     category: 'news',
     imgURL: '',
     path: '/',
@@ -1001,19 +999,20 @@ export const lifeStyle = [
   {
     id: 5,
     title: 'Яке свято відзначають 9 серпня: прикмети, традиції та заборони цього дня',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     category: 'news',
     imgURL: '',
     path: '/',
     accent: {
       title: 'Ексклюзив',
-      icon: 'exluziv',
+      icon: 'excluziv',
+      accentcolor: true,
     },
   },
   {
     id: 6,
     title: 'Вакарчук виклав неймовірне відео виконання гімну України в Іспанії',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     category: 'articles',
     imgURL: '',
     path: '/',
@@ -1025,7 +1024,7 @@ export const lifeStyle = [
   {
     id: 7,
     title: 'Топ-7 повсякденних речей, які не мінялися протягом століть',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     category: 'articles',
     imgURL: '',
     path: '/',
@@ -1035,7 +1034,7 @@ export const lifeStyle = [
   {
     id: 8,
     title: 'Арестович розповів про шалений заробіток, трьох дружин і дітей. Відео',
-    time: '05 серпня 11:00',
+    time: '2022-08-05 14:59:00',
     category: 'news',
     imgURL: '',
     path: '/',
@@ -1044,7 +1043,7 @@ export const lifeStyle = [
   {
     id: 9,
     title: 'Дружина Зеленського чесно зізналася, чи боїться смерті',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     category: 'articles',
     imgURL: '',
     path: '/',
@@ -1053,7 +1052,7 @@ export const lifeStyle = [
   {
     id: 10,
     title: 'Бийся на світлій стороні": як спортсмени, меценати й волонетри рятують життя українців',
-    time: '14:59',
+    time: '2022-08-05 14:59:00',
     category: 'articles',
     imgURL: '',
     path: '/',

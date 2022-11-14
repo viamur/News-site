@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { kolonki } from '../../utils/utils';
+import { getDate } from '../../utils/convertDate';
 
 import '@splidejs/react-splide/css';
 import s from './Colonki.module.scss';
@@ -34,6 +35,7 @@ const Kolonki = () => {
       >
         {/* <ul className={s.list}> */}
         {colonki.map(el => {
+          const date = getDate(el.date);
           return (
             <SplideSlide key={el.id} className={s.item} tag={'li'}>
               {/* <li key={el.id} className={s.item}> */}
@@ -51,7 +53,7 @@ const Kolonki = () => {
                 </div>
               </div>
               <p className={s.text}>{el.title}</p>
-              <p className={s.date}>{el.date}</p>
+              <p className={s.date}>{date}</p>
               {/* </li> */}
             </SplideSlide>
           );

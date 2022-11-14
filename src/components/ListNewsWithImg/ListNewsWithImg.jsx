@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getDate } from '../../utils/convertDate';
 
 import sprite from '../../images/icon/sprite.svg';
 import s from './ListNewsWithImg.module.scss';
@@ -7,11 +8,12 @@ const ListNewsWithImg = ({ news }) => {
   return (
     <ul className={s.list}>
       {news.map(el => {
+        const time = getDate(el.time);
         return (
           <li key={el.id} className={s.item}>
             <img src={el.img} alt={el.title} className={s.img} />
             <div className={s.wrap}>
-              <p className={s.time}>{el.time}</p>
+              <p className={s.time}>{time}</p>
               {el.accent && (
                 <>
                   <svg className={s.accent__svg} width={18} height={20}>

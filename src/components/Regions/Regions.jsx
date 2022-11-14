@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 import { regionNews } from '../../utils/utils';
+import { getDayAndMonth, getOnlyTime } from '../../utils/convertDate';
 import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
 
 import s from './Regions.module.scss';
@@ -165,17 +166,19 @@ const Regions = () => {
               <div>
                 <h4 className={s.region__title}>{card.name}</h4>
                 {card.news.map(el => {
+                  const date = getDayAndMonth(el.date);
                   return (
                     <>
                       <p className={s.card__date} key={el.id}>
-                        {el.date}
+                        {date}
                       </p>
                       <ul className={s.list__wrap}>
                         {el.dayNews.map(list => {
+                          const time = getOnlyTime(list.time);
                           return (
                             <li className={s.card__item}>
                               <Link className={s.card__link}>
-                                <span className={s.card__time}>{list.time}</span>
+                                <span className={s.card__time}>{time}</span>
                                 {list.title}
                               </Link>
                             </li>

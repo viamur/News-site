@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Container from '../Container/Container';
 import { ecomica } from '../../utils/utils';
-import s from './Economica.module.scss';
 import TopSectionTitle from '../TopSectionTitle/TopSectionTitle';
 import NavNews from '../NavNews/NavNews';
 import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
 import ListNewsWithImg from '../ListNewsWithImg/ListNewsWithImg';
+import s from './Economica.module.scss';
 
 const Economica = () => {
   const [filter, setFilter] = useState('news'); // news, articles

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Container from '../Container/Container';
 import { promoSlider } from '../../utils/utils';
+import { getDate } from '../../utils/convertDate';
 
 import '@splidejs/react-splide/css';
 import sprite from '../../images/icon/sprite.svg';
@@ -32,7 +33,7 @@ const Promo = () => {
               className={s.img}
             />
             <div className={s.wrapDate}>
-              <p className={s.date}>{news[active].date}</p>
+              <p className={s.date}>{getDate(news[active].date)}</p>
               {news[active].accent && (
                 <div className={s.accent}>
                   <svg className={s.accent__svg} width={16} height={16}>
@@ -62,9 +63,10 @@ const Promo = () => {
         }}
       >
         {news.map(el => {
+          const date = getDate(el.date);
           return (
             <SplideSlide key={el.id} className={s.item} tag={'li'}>
-              <p className={s.item__date}>{el.date}</p>
+              <p className={s.item__date}>{date}</p>
               <h4 className={s.item__title}>{el.title}</h4>
             </SplideSlide>
           );

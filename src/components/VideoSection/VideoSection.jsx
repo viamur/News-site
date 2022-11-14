@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 import { videoBlock } from '../../utils/utils';
+import { getDate } from '../../utils/convertDate';
 import chunk from 'chunk';
 
 import sprite from '../../images/icon/sprite.svg';
@@ -37,6 +38,7 @@ const VideoSection = () => {
         </div>
         <ul className={s.list}>
           {news.map(el => {
+            const date = getDate(el.date);
             return (
               <li key={el.id} className={s.item}>
                 <div className={s.item__top}>
@@ -45,7 +47,7 @@ const VideoSection = () => {
                     <use href={sprite + '#icon-' + 'video'}></use>
                   </svg>
                 </div>
-                <p className={s.date}>{el.date}</p>
+                <p className={s.date}>{date}</p>
                 <Link className={s.news}>{el.title}</Link>
               </li>
             );

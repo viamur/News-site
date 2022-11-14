@@ -9,9 +9,10 @@ import Kolonki from './Colonki/Colonki';
 import Polituka from './Polituka/Polituka';
 import BetweenSection from './BetweenSection/BetweenSection';
 import Promo from './Promo/Promo';
+import Economica from './Economica/Economica';
+import Lifestyle from './Lifestyle/Lifestyle';
 
 import './App.scss';
-import Economica from './Economica/Economica';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <BetweenSection />
         <Economica />
         <BetweenSection />
+        <Lifestyle />
       </main>
     </>
   );
