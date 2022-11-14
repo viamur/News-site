@@ -21,12 +21,17 @@ const ListNews = ({ data = [] }) => {
                 </p>
               </div>
             )}
-            <h3 className={el.accentcolor ? s.news__accent : s.news}>
-              <Link>
-                <span className={s.time}>{time}</span>
-                {el.title}
-              </Link>
-            </h3>
+            <div className={s.wrap}>
+              <h3 className={el.accentcolor ? s.news__accent : s.news}>
+                <Link>
+                  <span className={s.time}>{time}</span>
+                  {el.title}
+                </Link>
+              </h3>
+              {el.img && (
+                <img src={el.img} alt={el.title} className={s.img} height={72} width={72} />
+              )}
+            </div>
           </li>
         );
       })}

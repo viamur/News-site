@@ -18,6 +18,12 @@ import imgColonki3 from '../images/colonki/Avatar3.png';
 import imgColonki4 from '../images/colonki/Avatar4.png';
 
 import imgPromoDemo from '../images/promo/demo.png';
+
+import imgLifeStyle1 from '../images/lifestyle/1.png';
+import imgLifeStyle2 from '../images/lifestyle/2.png';
+import imgLifeStyle3 from '../images/lifestyle/3.png';
+import imgLifeStyle4 from '../images/lifestyle/4.png';
+
 /* Верхний перечень городов */
 export const region = [
   {
@@ -961,7 +967,7 @@ export const lifeStyle = [
     title: 'Селезньов розповів, навіщо росіяни спустошують склади боєприпасів у Білорусі',
     time: '2022-08-05 14:59:00',
     category: 'news',
-    imgURL: '',
+    img: imgLifeStyle1,
     path: '/',
     accent: {
       title: 'Інтерв’ю',
@@ -974,7 +980,7 @@ export const lifeStyle = [
     title: 'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною',
     time: '2022-08-05 14:59:00',
     category: 'news',
-    imgURL: '',
+    img: imgLifeStyle2,
     path: '/',
     accent: false,
   },
@@ -983,7 +989,7 @@ export const lifeStyle = [
     title: 'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи',
     time: '2022-08-05 14:59:00',
     category: 'news',
-    imgURL: '',
+    img: null,
     path: '/',
     accent: null,
   },
@@ -992,7 +998,7 @@ export const lifeStyle = [
     title: 'Що подивитися ввечері: топ-5 українських фільмів',
     time: '2022-08-05 14:59:00',
     category: 'news',
-    imgURL: '',
+    img: imgLifeStyle3,
     path: '/',
     accent: null,
   },
@@ -1001,7 +1007,7 @@ export const lifeStyle = [
     title: 'Яке свято відзначають 9 серпня: прикмети, традиції та заборони цього дня',
     time: '2022-08-05 14:59:00',
     category: 'news',
-    imgURL: '',
+    img: imgLifeStyle4,
     path: '/',
     accent: {
       title: 'Ексклюзив',
@@ -1014,7 +1020,7 @@ export const lifeStyle = [
     title: 'Вакарчук виклав неймовірне відео виконання гімну України в Іспанії',
     time: '2022-08-05 14:59:00',
     category: 'articles',
-    imgURL: '',
+    img: imgLifeStyle2,
     path: '/',
     accent: {
       title: 'Новина з відео',
@@ -1026,7 +1032,7 @@ export const lifeStyle = [
     title: 'Топ-7 повсякденних речей, які не мінялися протягом століть',
     time: '2022-08-05 14:59:00',
     category: 'articles',
-    imgURL: '',
+    img: imgLifeStyle1,
     path: '/',
     accent: null,
   },
@@ -1036,7 +1042,7 @@ export const lifeStyle = [
     title: 'Арестович розповів про шалений заробіток, трьох дружин і дітей. Відео',
     time: '2022-08-05 14:59:00',
     category: 'news',
-    imgURL: '',
+    img: imgLifeStyle4,
     path: '/',
     accent: null,
   },
@@ -1045,7 +1051,7 @@ export const lifeStyle = [
     title: 'Дружина Зеленського чесно зізналася, чи боїться смерті',
     time: '2022-08-05 14:59:00',
     category: 'articles',
-    imgURL: '',
+    img: null,
     path: '/',
     accent: null,
   },
@@ -1054,7 +1060,7 @@ export const lifeStyle = [
     title: 'Бийся на світлій стороні": як спортсмени, меценати й волонетри рятують життя українців',
     time: '2022-08-05 14:59:00',
     category: 'articles',
-    imgURL: '',
+    img: imgLifeStyle3,
     path: '/',
     accent: null,
   },

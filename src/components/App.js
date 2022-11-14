@@ -13,6 +13,7 @@ import Economica from './Economica/Economica';
 import Lifestyle from './Lifestyle/Lifestyle';
 
 import './App.scss';
+import Footer from './Footer/Footer';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Economica />
         <BetweenSection />
         <Lifestyle />
+        <Footer />
       </main>
     </>
   );
