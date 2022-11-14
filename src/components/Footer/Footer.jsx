@@ -23,7 +23,7 @@ const Footer = () => {
                   <Accordion className={s.accordion}>
                     <AccordionSummary
                       className={s.accordion__summary}
-                      expandIcon={<img src={icon} />}
+                      expandIcon={<img src={icon} alt={'icon'} height={16} width={16} />}
                     >
                       {el.title}
                     </AccordionSummary>
