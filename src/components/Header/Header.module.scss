@@ -46,10 +46,7 @@
 
   margin-right: 12px;
 }
-.nav {
-  width: 375px;
-  margin: 0 auto;
-}
+
 /* Блок выбора языка */
 .langBlock {
   position: relative;
@@ -163,7 +160,16 @@
 
 /* HEADER BOTTOM */
 .nav {
+  width: 375px;
   padding: 12px 0 12px 24px;
+  margin: 0 auto;
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+
+    width: 1440px;
+    padding: 12px 64px;
+  }
 }
 .accentSvg {
   margin-right: 8px;
@@ -188,6 +194,9 @@
 }
 .swiper {
   padding-right: 10px;
+  @include mq(desk) {
+    margin-left: 0 !important;
+  }
 }
 .swiperSlide {
   width: auto;
@@ -231,5 +240,38 @@
   }
   &__item:not(:last-child) {
     margin-right: 32px;
+  }
+}
+/* LIVE кнопка */
+.live {
+  display: flex;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: var(--primary-blue);
+  &__spanA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    margin-right: 12px;
+
+    background: rgba(224, 70, 70, 0.6);
+  }
+  &__spanB {
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #e04646;
   }
 }

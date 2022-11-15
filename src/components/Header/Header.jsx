@@ -169,6 +169,14 @@ const Header = () => {
             })}
           </div>
         </Swiper>
+        {isDesk && (
+          <Link className={s.live}>
+            <span className={s.live__spanA}>
+              <span className={s.live__spanB}></span>
+            </span>
+            live
+          </Link>
+        )}
       </nav>
     </header>
   );
