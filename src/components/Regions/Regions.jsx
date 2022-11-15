@@ -176,7 +176,7 @@ const Regions = () => {
                         {el.dayNews.map(list => {
                           const time = getOnlyTime(list.time);
                           return (
-                            <li className={s.card__item}>
+                            <li className={s.card__item} key={list.id + list.title}>
                               <Link className={s.card__link}>
                                 <span className={s.card__time}>{time}</span>
                                 {list.title}

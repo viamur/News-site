@@ -31,6 +31,11 @@ import iconSocTelegram from '../images/icon/soc/teleg.svg';
 import iconSocTikTok from '../images/icon/soc/tiktok.svg';
 import iconSocYouTube from '../images/icon/soc/youtube.svg';
 
+import iconHeaderSocFB from '../images/icon/header/fb.svg';
+import iconHeaderSocInstagram from '../images/icon/header/instagram.svg';
+import iconHeaderSocTelegram from '../images/icon/header/telegram.svg';
+import iconHeaderSocYouTube from '../images/icon/header/youtube.svg';
+
 /* Верхний перечень городов */
 export const region = [
   {
@@ -47,6 +52,34 @@ export const region = [
     id: 3,
     name: 'Харків',
     path: '/',
+  },
+];
+
+/* Хедер соцсети */
+export const headerSoc = [
+  {
+    id: 1,
+    title: 'Telegram',
+    link: 'https://www.youtube.com/',
+    icon: iconHeaderSocTelegram,
+  },
+  {
+    id: 2,
+    title: 'Facebook',
+    link: 'https://www.facebook.com/',
+    icon: iconHeaderSocFB,
+  },
+  {
+    id: 3,
+    title: 'Instagram',
+    link: 'https://www.instagram.com/',
+    icon: iconHeaderSocInstagram,
+  },
+  {
+    id: 4,
+    title: 'YouTube',
+    link: 'https://www.youtube.com/',
+    icon: iconHeaderSocYouTube,
   },
 ];
 

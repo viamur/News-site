@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { Link } from 'react-scroll';
 
 import Container from '../Container/Container';
-import { menu } from '../../utils/utils';
-import sprite from '../../images/icon/sprite.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { menu, region, headerSoc } from '../../utils/utils';
+import { useDeskScreen } from '../../utils/useMediaQuery';
 
 // Import Swiper styles
 import 'swiper/css';
 import './styleForSwiper.css';
+// scss
+import sprite from '../../images/icon/sprite.svg';
 import s from './Header.module.scss';
 
 const Header = () => {
@@ -17,11 +19,13 @@ const Header = () => {
   const [isOpenSearch, setIsOpenSearch] = useState(false);
   const [search, setSearch] = useState('');
 
+  const isDesk = useDeskScreen();
+
   const handleChangeLang = e => {
     e.preventDefault();
-
     const name = e.target.name;
     setLeng(name);
+    setIsOpenSelector(prev => !prev);
 
     /* Тут можно поменять путь или квери параметр добавить к адресной строки
         для изменения языка на странице */
@@ -43,38 +47,82 @@ const Header = () => {
       <div className={s.top}>
         <Container>
           <div className={s.top__wrap}>
-            <button type="button" aria-label="menu" className={s.menuBtn}>
-              <svg className={s.svgBtnMenu} width={15} height={8}>
-                <use href={sprite + '#icon-' + 'burger'}></use>
-              </svg>
-              Меню
-            </button>
-            <div className={s.top__right}>
-              {isOpenSearch && (
-                <input
-                  type="text"
-                  value={search}
-                  onChange={e => setSearch(e.target.value)}
-                  className={s.search__input}
-                />
-              )}
-              <button type="button" aria-label="search" className={s.search} onClick={hadleSearch}>
-                <svg className={s.svgBtnSearch} width={16} height={16}>
-                  <use href={sprite + '#icon-' + 'search'}></use>
+            <div className={s.top__left}>
+              <button type="button" aria-label="menu" className={s.menuBtn}>
+                <svg className={s.svgBtnMenu} width={15} height={8}>
+                  <use href={sprite + '#icon-' + 'burger'}></use>
                 </svg>
+                Меню
               </button>
-              <button
-                type="button"
-                onClick={() => setIsOpenSelector(prev => !prev)}
-                className={s.select}
-              >
-                {lang}
-                <svg className={s.select__svg} width={10} height={6}>
-                  <use href={sprite + '#icon-' + 'select'}></use>
-                </svg>
-                {isOpenSelector && (
+              {isDesk && (
+                <ul className={s.region}>
+                  {region.map(el => {
+                    return (
+                      <li key={el.name} className={s.region__item}>
+                        <Link to={el.path} className={s.region__link}>
+                          {el.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </div>
+            <div className={s.top__right}>
+              {/* Поисковый блок */}
+              <div className={s.search__block}>
+                {(isOpenSearch || isDesk) && (
+                  <input
+                    type="text"
+                    value={search}
+                    placeholder={'пошук новин'}
+                    onChange={e => setSearch(e.target.value)}
+                    className={s.search__input}
+                  />
+                )}
+                <button
+                  type="button"
+                  aria-label="search"
+                  className={s.search}
+                  onClick={hadleSearch}
+                >
+                  <svg className={s.svgBtnSearch} width={16} height={16}>
+                    <use href={sprite + '#icon-' + 'search'}></use>
+                  </svg>
+                </button>
+              </div>
+              {/* Cоцсети в хедере только на десктопе */}
+              {isDesk && (
+                <ul className={s.soc}>
+                  {headerSoc.map(el => {
+                    return (
+                      <li key={el.id + el.title} className={s.soc__item}>
+                        <a href={el.link}>
+                          <img src={el.icon} alt={el.title} height={22} width={22} />
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+              {/* Блок с выбором языка сайта */}
+              <div className={s.langBlock}>
+                <button
+                  type="button"
+                  name={lang === 'UA' ? 'UA' : 'EN'}
+                  onClick={handleChangeLang}
+                  className={s.langBlock__selectA}
+                >
+                  {lang === 'UA' ? 'UA' : 'EN'}
+                  {!isDesk && (
+                    <svg className={s.langBlock__svg} width={10} height={6}>
+                      <use href={sprite + '#icon-' + 'select'}></use>
+                    </svg>
+                  )}
+                </button>
+                {(isOpenSelector || isDesk) && (
                   <button
-                    className={s.selector__btn}
+                    className={s.langBlock__selectB}
                     name={lang !== 'UA' ? 'UA' : 'EN'}
                     type="button"
                     onClick={handleChangeLang}
@@ -82,7 +130,7 @@ const Header = () => {
                     {lang !== 'UA' ? 'UA' : 'EN'}
                   </button>
                 )}
-              </button>
+              </div>
             </div>
           </div>
         </Container>

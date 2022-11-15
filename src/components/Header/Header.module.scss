@@ -1,3 +1,4 @@
+@import '../../sass/mixin';
 .header {
   position: relative;
 }
@@ -9,6 +10,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.top__left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  margin-right: 16px;
 }
 .top__right {
   display: flex;
@@ -42,37 +50,61 @@
   width: 375px;
   margin: 0 auto;
 }
-.select {
+/* Блок выбора языка */
+.langBlock {
   position: relative;
 
-  outline: none;
-  border: none;
-  background: none;
+  @include mq(desk) {
+    display: flex;
 
-  padding: 5px;
+    margin-left: 33px;
+  }
 
-  display: flex;
-  align-items: center;
+  &__selectA {
+    outline: none;
+    border: none;
+    background: none;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    text-transform: uppercase;
+    color: var(--text-color);
+
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+  }
   &__svg {
     margin-left: 5px;
   }
-}
-.search {
-  margin-right: 16px;
+  &__selectB {
+    position: absolute;
+    bottom: -80%;
+    left: 0;
+    z-index: 10;
 
-  border: none;
-  background-color: transparent;
-  &__input {
-    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    text-transform: uppercase;
+    color: var(--text-color);
+
+    padding: 5px;
+
     outline: none;
+    border: none;
+    background: none;
+    @include mq(desk) {
+      position: relative;
 
-    border-bottom: 1px solid grey;
-
-    width: 140px;
-    padding-left: 10px;
-    padding-right: 10px;
+      margin-left: 15px;
+      color: #b0b0b0;
+    }
   }
 }
+
 .svgBtnSelect {
   position: absolute;
   top: 6px;
@@ -80,6 +112,53 @@
 }
 .formSelect {
   position: relative;
+}
+.search {
+  margin-right: 16px;
+  display: flex;
+
+  border: none;
+  background-color: transparent;
+  @include mq(desk) {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    fill: #919191;
+  }
+  &__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include mq(desk) {
+      margin-right: 38px;
+    }
+  }
+  &__input {
+    border: none;
+    outline: none;
+    background: #f7f7f7;
+    border-radius: 68px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+
+    width: 120px;
+    padding: 8px 16px;
+    margin-right: 16px;
+    @include mq(desk) {
+      width: 272px;
+    }
+    &::placeholder {
+      @include mq(desk) {
+        color: #b0b0b0;
+        padding-left: 30px;
+      }
+    }
+  }
 }
 
 /* HEADER BOTTOM */
@@ -114,17 +193,43 @@
   width: auto;
   text-align: center;
 }
-.selector {
-  &__btn {
+
+/* Меню с городами */
+.region {
+  display: flex;
+
+  margin-left: 40px;
+  &__item:not(:last-child) {
+    margin-right: 32px;
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+    color: var(--text-color);
+  }
+}
+
+/* Соцсети только на десктопе */
+.soc {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding-right: 38px;
+  &::after {
+    content: '';
     position: absolute;
-    bottom: -80%;
-    left: 0;
-    z-index: 10;
+    right: 0;
 
-    padding: 5px;
+    display: block;
+    width: 1px;
+    height: 16px;
 
-    outline: none;
-    border: none;
-    background: none;
+    background-color: #8a8a8a;
+  }
+  &__item:not(:last-child) {
+    margin-right: 32px;
   }
 }
