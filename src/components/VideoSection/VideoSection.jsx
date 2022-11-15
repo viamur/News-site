@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 import { videoBlock } from '../../utils/utils';
+import { useDeskScreen } from '../../utils/useMediaQuery';
 import { getDate } from '../../utils/convertDate';
 import chunk from 'chunk';
+import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
 
 import sprite from '../../images/icon/sprite.svg';
 import s from './VideoSection.module.scss';
@@ -12,6 +14,8 @@ const VideoSection = () => {
   const [news, setNews] = useState([]);
   const [Allnews, setAllNews] = useState([[]]);
   const [page, setPage] = useState(0);
+
+  const isDesk = useDeskScreen();
 
   useEffect(() => {
     /* Подальшому тут можно GET запрос зробити і записати в стейт */
@@ -29,15 +33,30 @@ const VideoSection = () => {
     setPage(prev => prev + 1);
   };
 
+  const style = isDesk
+    ? {
+        background: `linear-gradient(180deg, rgba(21, 35, 56, 0.5) 0%, rgba(24, 40, 64, 0.95) 100%), url(${news[0]?.imgURL})`,
+        backgroundSize: 'cover',
+      }
+    : null;
+
   return (
-    <section className={s.section}>
+    <section className={s.section} style={style}>
       <Container>
         <div className={s.top}>
           <h2 className={s.title}>Відео</h2>
-          <Link className={s.link}>Більше відео</Link>
+          {isDesk ? (
+            <MoreNewsBtn
+              title={'Більше новин'}
+              style={{ color: 'white', fill: 'white', marginTop: '0px' }}
+            />
+          ) : (
+            <Link className={s.link}>Більше відео</Link>
+          )}
         </div>
         <ul className={s.list}>
-          {news.map(el => {
+          {news.map((el, index) => {
+            const title = el.title.length > 62 ? el.title.slice(0, 62) + '...' : el.title;
             const date = getDate(el.date);
             return (
               <li key={el.id} className={s.item}>
@@ -48,12 +67,14 @@ const VideoSection = () => {
                   </svg>
                 </div>
                 <p className={s.date}>{date}</p>
-                <Link className={s.news}>{el.title}</Link>
+                <Link className={s.news}>
+                  {isDesk ? (index === 0 ? el.title : title) : el.title}
+                </Link>
               </li>
             );
           })}
         </ul>
-        {Allnews.length !== page + 1 && (
+        {Allnews.length !== page + 1 && !isDesk && (
           <button type="button" className={s.btn} onClick={handleMoreNews}>
             Більше
           </button>

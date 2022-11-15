@@ -170,10 +170,8 @@ const Regions = () => {
                 {card.news.map(el => {
                   const date = getDayAndMonth(el.date);
                   return (
-                    <>
-                      <p className={s.card__date} key={el.id}>
-                        {date}
-                      </p>
+                    <div key={el.id}>
+                      <p className={s.card__date}>{date}</p>
                       <ul className={s.list__wrap}>
                         {el.dayNews.map(list => {
                           const time = getOnlyTime(list.time);
@@ -187,7 +185,7 @@ const Regions = () => {
                           );
                         })}
                       </ul>
-                    </>
+                    </div>
                   );
                 })}
               </div>

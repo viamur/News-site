@@ -1,8 +1,13 @@
+@import '../../sass/mixin';
+
 .section {
   padding: 56px 0;
 
   color: var(--white);
   background-color: var(--primary-blue);
+  @include mq(desk) {
+    padding-bottom: 112px;
+  }
 }
 .top {
   display: flex;
@@ -15,6 +20,10 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 1.3;
+
+  @include mq(desk) {
+    font-size: 32px;
+  }
 }
 .link {
   font-weight: 600;
@@ -45,6 +54,9 @@
   position: absolute;
   left: 8px;
   bottom: 8px;
+
+  fill: white;
+  opacity: 0.6;
 }
 .date {
   font-weight: 400;
@@ -80,5 +92,63 @@
   &:focus {
     background-color: var(--white);
     color: var(--primary-blue);
+  }
+}
+
+@include mq(desk) {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px 32px;
+    grid-template-areas:
+      'a a aa bb'
+      'a a cc dd';
+  }
+  .item {
+    margin-bottom: 0 !important;
+    & a {
+      font-size: 16px;
+    }
+  }
+  .item:nth-child(1) {
+    grid-area: a;
+    & img {
+      height: 360px;
+    }
+    & div {
+      margin-bottom: 32px;
+    }
+    & p {
+      line-height: 1.4;
+      margin-bottom: 24px;
+    }
+    & a {
+      font-size: 32px;
+    }
+    & svg {
+      opacity: 1;
+      width: 40px;
+      height: 40px;
+
+      left: 16px;
+      bottom: 22px;
+    }
+  }
+
+  .item:nth-child(2) {
+    grid-area: aa;
+  }
+
+  .item:nth-child(3) {
+    grid-area: bb;
+  }
+
+  .item:nth-child(4) {
+    grid-area: cc;
+  }
+
+  .item:nth-child(5) {
+    grid-area: dd;
   }
 }
