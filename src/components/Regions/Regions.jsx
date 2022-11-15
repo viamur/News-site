@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 import { regionNews } from '../../utils/utils';
+import { useDeskScreen } from '../../utils/useMediaQuery';
 import { getDayAndMonth, getOnlyTime } from '../../utils/convertDate';
 import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
 
@@ -10,6 +10,8 @@ import s from './Regions.module.scss';
 const Regions = () => {
   const [filter, setFilter] = useState('Kyiv');
   const [news, setNews] = useState([]);
+
+  const isDesk = useDeskScreen();
 
   useEffect(() => {
     /* Тут может быть гет запрос */
@@ -114,38 +116,40 @@ const Regions = () => {
         <h2 className={s.top__title}>Регіони</h2>
         <Link className={s.top__link}>Всі новини розділу</Link>
       </div>
-      <ul className={s.list}>
-        <li className={s.list__item}>
-          <button
-            type="button"
-            onClick={handleChangeFilter}
-            name="Kyiv"
-            className={filter === 'Kyiv' ? s.list__btnActive : s.list__btn}
-          >
-            Київ
-          </button>
-        </li>
-        <li className={s.list__item}>
-          <button
-            type="button"
-            onClick={handleChangeFilter}
-            name="Odessa"
-            className={filter === 'Odessa' ? s.list__btnActive : s.list__btn}
-          >
-            Одесса
-          </button>
-        </li>
-        <li className={s.list__item}>
-          <button
-            type="button"
-            onClick={handleChangeFilter}
-            name="Kharkiv"
-            className={filter === 'Kharkiv' ? s.list__btnActive : s.list__btn}
-          >
-            Харків
-          </button>
-        </li>
-      </ul>
+      {!isDesk && (
+        <ul className={s.list}>
+          <li className={s.list__item}>
+            <button
+              type="button"
+              onClick={handleChangeFilter}
+              name="Kyiv"
+              className={filter === 'Kyiv' ? s.list__btnActive : s.list__btn}
+            >
+              Київ
+            </button>
+          </li>
+          <li className={s.list__item}>
+            <button
+              type="button"
+              onClick={handleChangeFilter}
+              name="Odessa"
+              className={filter === 'Odessa' ? s.list__btnActive : s.list__btn}
+            >
+              Одесса
+            </button>
+          </li>
+          <li className={s.list__item}>
+            <button
+              type="button"
+              onClick={handleChangeFilter}
+              name="Kharkiv"
+              className={filter === 'Kharkiv' ? s.list__btnActive : s.list__btn}
+            >
+              Харків
+            </button>
+          </li>
+        </ul>
+      )}
       <ul
         className={s.region__list}
         ref={listRef}

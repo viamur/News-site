@@ -10,6 +10,10 @@
   @include mq(mob) {
     width: 375px;
   }
+  @include mq(desk) {
+    width: auto;
+    padding: 0;
+  }
   background-color: var(--grey-bg);
 }
 .top {
@@ -18,13 +22,19 @@
   align-items: center;
 
   margin-bottom: 24px;
+  @include mq(desk) {
+    margin-bottom: 32px;
+  }
 
   &__title {
     font-weight: 700;
     font-size: 30px;
     line-height: 1.3;
 
-    color: #2d2d2d;
+    color: var(--text-color);
+    @include mq(desk) {
+      font-size: 32px;
+    }
   }
   &__link {
     font-weight: 600;
@@ -81,6 +91,9 @@
     &::-webkit-scrollbar {
       width: 0;
     }
+    @include mq(desk) {
+      padding: 0;
+    }
   }
   &__item {
     display: flex;
@@ -94,6 +107,9 @@
 
     border-radius: 12px;
     background-color: var(--white);
+    @include mq(desk) {
+      padding-bottom: 32px;
+    }
   }
   &__item:not(:last-child) {
     margin-right: 16px;
@@ -102,7 +118,11 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 1.3;
-    color: #2d2d2d;
+    color: var(--text-color);
+    @include mq(desk) {
+      font-size: 24px;
+      line-height: 1.4;
+    }
   }
 }
 
@@ -116,13 +136,22 @@
 
     margin-top: 20px;
     margin-bottom: 12px;
+    @include mq(desk) {
+      margin: 24px 0 12px 0;
+    }
   }
   &__item:not(:last-child) {
     padding-bottom: 14px;
     border-bottom: 1px solid #dbdbdb;
+    @include mq(desk) {
+      padding-bottom: 16px;
+    }
   }
   &__item:not(:first-child) {
     padding-top: 14px;
+    @include mq(desk) {
+      padding-top: 16px;
+    }
   }
   &__link {
     font-weight: 500;
@@ -136,5 +165,10 @@
     line-height: 1.43;
     color: #707070;
     margin-right: 13px;
+    @include mq(desk) {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
   }
 }
