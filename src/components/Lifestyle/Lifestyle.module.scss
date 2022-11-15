@@ -1,5 +1,19 @@
+@import '../../sass/mixin';
+
 .section {
   padding: 56px 0;
 
   background-color: var(--white);
+}
+.container {
+  padding: 0 24px;
+  margin: 0 auto;
+  max-width: 100%;
+
+  @include mq(mob) {
+    width: 375px;
+  }
+  @include mq(desk) {
+    width: auto;
+  }
 }

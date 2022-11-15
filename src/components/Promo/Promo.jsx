@@ -18,7 +18,7 @@ const Promo = () => {
   }, []);
   return (
     <section className={s.section}>
-      <Container>
+      <div className={s.container}>
         <div className={s.top}>
           <h2 className={s.title}>Промо</h2>
           <Link className={s.link}>Всі матеріали</Link>
@@ -48,7 +48,7 @@ const Promo = () => {
             </h3>
           </div>
         )}
-      </Container>
+      </div>
       <Splide
         onMoved={(slide, index) => setActive(index)}
         aria-label="Колонки"

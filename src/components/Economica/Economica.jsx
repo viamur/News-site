@@ -17,12 +17,12 @@ const Economica = () => {
 
   return (
     <section className={s.section}>
-      <Container>
+      <div className={s.container}>
         <TopSectionTitle title={'Економіка'} textLink={'Всі новини розділу'} />
         <NavNews filter={filter} setFilter={setFilter} marginBottom={'32px'} />
         <ListNewsWithImg news={news} />
         <MoreNewsBtn title={'Більше'} />
-      </Container>
+      </div>
     </section>
   );
 };

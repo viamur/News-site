@@ -11,10 +11,11 @@ import BetweenSection from './BetweenSection/BetweenSection';
 import Promo from './Promo/Promo';
 import Economica from './Economica/Economica';
 import Lifestyle from './Lifestyle/Lifestyle';
+import FirstSectionNews from '../section/FirstSectionNews/FirstSectionNews';
+import SecondSectionNews from '../section/SecondSectionNews/SecondSectionNews';
+import Footer from './Footer/Footer';
 
 import './App.scss';
-import Footer from './Footer/Footer';
-import FirstSectionNews from '../section/FirstSectionNews/FirstSectionNews';
 
 function App() {
   return (
@@ -25,14 +26,7 @@ function App() {
         <Hero />
         <FirstSectionNews />
         <VideoSection />
-        <Kolonki />
-        <Polituka />
-        <BetweenSection />
-        <Promo />
-        <BetweenSection />
-        <Economica />
-        <BetweenSection />
-        <Lifestyle />
+        <SecondSectionNews />
         <Footer />
       </main>
     </>

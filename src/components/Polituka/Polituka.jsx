@@ -19,12 +19,10 @@ const Polituka = () => {
 
   return (
     <section className={s.section}>
-      <Container>
-        <TopSectionTitle title={'Політика'} textLink={'Всі новини розділу'} />
-        <NavNews filter={filter} setFilter={setFilter} />
-        <ListNews data={news} />
-        <MoreNewsBtn title={'Більше'} />
-      </Container>
+      <TopSectionTitle title={'Політика'} textLink={'Всі новини розділу'} />
+      <NavNews filter={filter} setFilter={setFilter} />
+      <ListNews data={news} />
+      <MoreNewsBtn title={'Більше'} />
     </section>
   );
 };

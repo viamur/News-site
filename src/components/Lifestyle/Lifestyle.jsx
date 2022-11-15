@@ -18,12 +18,12 @@ const Lifestyle = () => {
 
   return (
     <section className={s.section}>
-      <Container>
+      <div className={s.container}>
         <TopSectionTitle title={'Лайфстайл'} textLink={'Всі новини розділу'} />
         <NavNews filter={filter} setFilter={setFilter} />
         <ListNews data={news} />
         <MoreNewsBtn title={'Більше'} />
-      </Container>
+      </div>
     </section>
   );
 };

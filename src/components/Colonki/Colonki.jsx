@@ -2,13 +2,16 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { kolonki } from '../../utils/utils';
+import { useDeskScreen } from '../../utils/useMediaQuery';
 import { getDate } from '../../utils/convertDate';
 
 import '@splidejs/react-splide/css';
+// import './splide.scss';
 import s from './Colonki.module.scss';
 
 const Kolonki = () => {
   const [colonki, setColonki] = useState([]);
+  const isDesk = useDeskScreen();
 
   useEffect(() => {
     /* Тут можно запрос сделать */
@@ -60,6 +63,11 @@ const Kolonki = () => {
         })}
         {/* </ul> */}
       </Splide>
+      {isDesk && (
+        <button type="button" className={s.allColonkiBtn}>
+          Всі колонки
+        </button>
+      )}
     </section>
   );
 };
