@@ -46,48 +46,48 @@ const AllNews = () => {
     setPage(prev => prev + 1);
   };
   return (
-    <section id="news" className={s.section}>
-      <Container>
-        <div className={s.top}>
-          <h2 className={s.top__title}>Всі новини</h2>
-          <Link className={s.top__link}>Архiв</Link>
-        </div>
-        <ul className={s.nav}>
-          <li className={s.nav__item}>
-            <button
-              type="button"
-              name="all"
-              onClick={handleChangeFilter}
-              className={filter === 'all' ? s.nav__btnActive : s.nav__btn}
-            >
-              Всі
-            </button>
-          </li>
-          <li className={s.nav__item}>
-            <button
-              type="button"
-              name="news"
-              onClick={handleChangeFilter}
-              className={filter === 'news' ? s.nav__btnActive : s.nav__btn}
-            >
-              Новини
-            </button>
-          </li>
-          <li className={s.nav__item}>
-            <button
-              type="button"
-              name="articles"
-              onClick={handleChangeFilter}
-              className={filter === 'articles' ? s.nav__btnActive : s.nav__btn}
-            >
-              Статті
-            </button>
-          </li>
-        </ul>
+    <div id="news" className={s.section}>
+      <div className={s.top}>
+        <h2 className={s.top__title}>Всі новини</h2>
+        <Link className={s.top__link}>Архiв</Link>
+      </div>
+      <ul className={s.nav}>
+        <li className={s.nav__item}>
+          <button
+            type="button"
+            name="all"
+            onClick={handleChangeFilter}
+            className={filter === 'all' ? s.nav__btnActive : s.nav__btn}
+          >
+            Всі
+          </button>
+        </li>
+        <li className={s.nav__item}>
+          <button
+            type="button"
+            name="news"
+            onClick={handleChangeFilter}
+            className={filter === 'news' ? s.nav__btnActive : s.nav__btn}
+          >
+            Новини
+          </button>
+        </li>
+        <li className={s.nav__item}>
+          <button
+            type="button"
+            name="articles"
+            onClick={handleChangeFilter}
+            className={filter === 'articles' ? s.nav__btnActive : s.nav__btn}
+          >
+            Статті
+          </button>
+        </li>
+      </ul>
+      <div className={s.wrapListNews}>
         <ListNews data={news} />
-        {chunkData.length !== page && <BtnLoadMore handleUpdateNews={handleUpdateNews} />}
-      </Container>
-    </section>
+      </div>
+      {chunkData.length !== page && <BtnLoadMore handleUpdateNews={handleUpdateNews} />}
+    </div>
   );
 };
 

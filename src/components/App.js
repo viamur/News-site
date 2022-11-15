@@ -14,6 +14,7 @@ import Lifestyle from './Lifestyle/Lifestyle';
 
 import './App.scss';
 import Footer from './Footer/Footer';
+import FirstSectionNews from '../section/FirstSectionNews/FirstSectionNews';
 
 function App() {
   return (
@@ -22,9 +23,7 @@ function App() {
       <main>
         <InfoWar />
         <Hero />
-        <AllNews />
-        <ChoiceRedaction />
-        <Regions />
+        <FirstSectionNews />
         <VideoSection />
         <Kolonki />
         <Polituka />

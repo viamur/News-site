@@ -1,0 +1,21 @@
+@import '../../sass/mixin';
+.section {
+  background-color: var(--grey-bg);
+}
+.container {
+  @include mq(desk) {
+    display: flex;
+    align-items: flex-start;
+
+    width: 1440px;
+    margin: 0 auto;
+    padding: 64px 64px 32px 64px;
+  }
+}
+.right {
+  @include mq(desk) {
+    flex-grow: 2;
+
+    margin-left: 32px;
+  }
+}

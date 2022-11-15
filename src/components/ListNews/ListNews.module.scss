@@ -1,5 +1,23 @@
+@import '../../sass/mixin';
+
+.list {
+  margin-bottom: 32px;
+
+  @include mq(desk) {
+    position: relative;
+    max-height: 1253px;
+
+    overflow-y: scroll;
+  }
+}
 .item {
   padding: 24px 0;
+}
+.item:first-child {
+  padding-top: 0;
+}
+.item:last-child {
+  padding-bottom: 0;
 }
 .item:not(:last-child) {
   border-bottom: 1px solid #ebebeb;

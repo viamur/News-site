@@ -6,7 +6,7 @@ import s from './ListNews.module.scss';
 
 const ListNews = ({ data = [] }) => {
   return (
-    <ul>
+    <ul className={s.list}>
       {data.map(el => {
         const time = getOnlyTime(el.time);
         return (

@@ -1,12 +1,13 @@
+import { useEffect, useState } from 'react';
+import chunk from 'chunk';
 import Container from '../Container/Container';
 
 import { choiceRedactors } from '../../utils/utils';
+import { useDeskScreen } from '../../utils/useMediaQuery';
 import BtnLoadMore from '../BtnLoadMore/BtnLoadMore';
-import chunk from 'chunk';
+import ListNewsWithImg from '../ListNewsWithImg/ListNewsWithImg';
 
 import s from './ChoiceRedaction.module.scss';
-import { useEffect, useState } from 'react';
-import ListNewsWithImg from '../ListNewsWithImg/ListNewsWithImg';
 
 /* Количество отображаемых новостей */
 const quantity = 3;
@@ -16,11 +17,18 @@ const ChoiceRedaction = () => {
   const [page, setPage] = useState(1);
   const [chunkData, setChunkData] = useState([[]]);
 
+  const isDesk = useDeskScreen();
+
   useEffect(() => {
+    if (isDesk) {
+      const data = chunk(choiceRedactors, 6);
+      setNews(data[0]);
+      return;
+    }
     const data = chunk(choiceRedactors, quantity);
     setNews(data[0]);
     setChunkData(data);
-  }, []);
+  }, [isDesk]);
 
   const handleUpdateNews = e => {
     e.preventDefault();
@@ -28,14 +36,12 @@ const ChoiceRedaction = () => {
     setPage(prev => prev + 1);
   };
   return (
-    <section className={s.section}>
-      <Container>
-        <h2 className={s.title}>Вибір редакції</h2>
-        <ListNewsWithImg news={news} />
+    <div className={s.section}>
+      <h2 className={s.title}>Вибір редакції</h2>
+      <ListNewsWithImg news={news} />
 
-        {chunkData.length !== page && <BtnLoadMore handleUpdateNews={handleUpdateNews} />}
-      </Container>
-    </section>
+      {chunkData.length !== page && !isDesk && <BtnLoadMore handleUpdateNews={handleUpdateNews} />}
+    </div>
   );
 };
 
