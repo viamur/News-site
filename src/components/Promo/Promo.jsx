@@ -1,17 +1,20 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import Container from '../Container/Container';
 import { promoSlider } from '../../utils/utils';
+import { useDeskScreen } from '../../utils/useMediaQuery';
 import { getDate } from '../../utils/convertDate';
 
 import '@splidejs/react-splide/css';
+import './splide.scss';
 import sprite from '../../images/icon/sprite.svg';
 import s from './Promo.module.scss';
 
 const Promo = () => {
   const [news, setNews] = useState([]);
   const [active, setActive] = useState(0);
+  const isDesk = useDeskScreen();
 
   useEffect(() => {
     setNews(promoSlider);
@@ -32,46 +35,67 @@ const Promo = () => {
               width={328}
               className={s.img}
             />
-            <div className={s.wrapDate}>
-              <p className={s.date}>{getDate(news[active].date)}</p>
-              {news[active].accent && (
-                <div className={s.accent}>
-                  <svg className={s.accent__svg} width={16} height={16}>
-                    <use href={sprite + '#icon-' + news[active].accent.icon}></use>
-                  </svg>
-                  <p className={s.accent__title}>{news[active].accent.title}</p>
-                </div>
-              )}
+            <div className={s.card__bottom}>
+              <div className={s.wrapDate}>
+                <p className={s.date}>{getDate(news[active].date)}</p>
+                {news[active].accent && (
+                  <div className={s.accent}>
+                    <svg className={s.accent__svg} width={16} height={16}>
+                      <use href={sprite + '#icon-' + news[active].accent.icon}></use>
+                    </svg>
+                    <p className={s.accent__title}>{news[active].accent.title}</p>
+                  </div>
+                )}
+              </div>
+              <h3 className={s.card__title}>
+                <Link to={news[active].path}>{news[active].title}</Link>
+              </h3>
             </div>
-            <h3 className={s.card__title}>
-              <Link to={news[active].path}>{news[active].title}</Link>
-            </h3>
           </div>
         )}
       </div>
-      <Splide
-        onMoved={(slide, index) => setActive(index)}
-        aria-label="Колонки"
-        className={s.slider}
-        options={{
-          rewind: false,
-          width: '375px',
-          gap: '24px',
-          autoWidth: true,
-          pagination: false,
-          arrows: false,
-        }}
-      >
-        {news.map(el => {
-          const date = getDate(el.date);
-          return (
-            <SplideSlide key={el.id} className={s.item} tag={'li'}>
-              <p className={s.item__date}>{date}</p>
-              <h4 className={s.item__title}>{el.title}</h4>
-            </SplideSlide>
-          );
-        })}
-      </Splide>
+      <div className={s.wrapper}>
+        <Splide
+          onMoved={(slide, index) => setActive(index)}
+          aria-label="Promo"
+          className={s.slider}
+          options={{
+            rewind: false,
+            width: isDesk ? '90%' : '375px',
+            gap: isDesk ? '32px' : '24px',
+            autoWidth: true,
+            pagination: false,
+            arrows: isDesk ? true : false,
+          }}
+        >
+          {news.map((el, index) => {
+            const date = getDate(el.date);
+            return (
+              <SplideSlide
+                key={el.id}
+                className={s.item}
+                tag={'li'}
+                onClick={() => setActive(index)}
+              >
+                <p className={s.item__date}>{date}</p>
+                <h4 className={s.item__title}>{el.title}</h4>
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+        {false && (
+          <div class="splide__arrows splide__arrows--ltr">
+            <button
+              type="button"
+              className="splide__arrow splide__arrow--next"
+              aria-label="Next slide"
+              aria-controls="default-track"
+            >
+              next
+            </button>
+          </div>
+        )}
+      </div>
     </section>
   );
 };

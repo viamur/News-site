@@ -18,6 +18,7 @@ import imgColonki3 from '../images/colonki/Avatar3.png';
 import imgColonki4 from '../images/colonki/Avatar4.png';
 
 import imgPromoDemo from '../images/promo/demo.png';
+import imgPromoTv from '../images/promo/tv.jpeg';
 
 import imgLifeStyle1 from '../images/lifestyle/1.png';
 import imgLifeStyle2 from '../images/lifestyle/2.png';
@@ -811,7 +812,7 @@ export const promoSlider = [
   {
     id: 1,
     title: 'Акція! Телевізори Samsung з вигодою та в оплату частинами до 12 платежів',
-    img: imgPromoDemo,
+    imgURL: imgPromoTv,
     path: '/',
     date: '2022/08/05 11:00:00',
     accent: {
@@ -844,7 +845,7 @@ export const promoSlider = [
   {
     id: 4,
     title: 'Мобільний телефон Xiaomi Redmi 9C 3/64GB',
-    imgURL: imgPromoDemo,
+    imgURL: imgPromoTv,
     path: '/',
     date: '2022/08/05 11:00:00',
     accent: {
