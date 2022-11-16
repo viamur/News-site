@@ -27,12 +27,23 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 487px;
+    height: 346px; // поменять потом
+    margin-bottom: 0;
   }
 }
 .item {
   border-bottom: 1px solid #dedfe0;
   border-radius: 2px;
+  @include mq(desk) {
+    border: none;
+    margin-bottom: 24px;
+
+    margin-right: 124px;
+
+    &:nth-child(8) {
+      margin-bottom: 0px;
+    }
+  }
 
   &__title {
     font-weight: 600;
@@ -41,20 +52,36 @@
     color: var(--text-color);
 
     padding: 16px;
+    @include mq(desk) {
+      line-height: 1.3;
+      padding: 0;
+    }
   }
 }
 .submenu {
+  @include mq(desk) {
+    margin-top: 8px;
+  }
   &__item {
     padding-left: 16px;
+    @include mq(desk) {
+      padding-left: 0;
+    }
   }
   &__item:not(:last-child) {
     margin-bottom: 16px;
+    @include mq(desk) {
+      margin-bottom: 8px;
+    }
   }
   &__link {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.38;
     color: #515151;
+    @include mq(desk) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -62,6 +89,9 @@
 
 .secondMenu {
   margin-bottom: 40px;
+  @include mq(desk) {
+    margin-bottom: 0;
+  }
   &__item {
     margin-bottom: 24px;
   }
@@ -72,6 +102,10 @@
     text-transform: uppercase;
     text-align: center;
     color: var(--text-color);
+    @include mq(desk) {
+      line-height: 1.3;
+      text-align: start;
+    }
     &:hover,
     &:focus {
       text-decoration: underline;
@@ -81,7 +115,10 @@
 
 /* Соцсети */
 .soc {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
+  @include mq(desk) {
+    margin-bottom: 62px;
+  }
   &__title {
     font-weight: 600;
     font-size: 22px;
@@ -89,6 +126,12 @@
     color: var(--text-color);
 
     margin-bottom: 24px;
+    @include mq(desk) {
+      font-size: 24px;
+      line-height: 1.4;
+
+      margin-bottom: 32px;
+    }
   }
   &__list {
     display: flex;
@@ -96,15 +139,33 @@
     flex-wrap: wrap;
 
     height: 115px;
+    @include mq(desk) {
+      flex-direction: row;
+      height: auto;
+    }
   }
   &__item {
     width: 50%;
+    @include mq(desk) {
+      width: auto;
+    }
+    &:not(:last-child) {
+      @include mq(desk) {
+        margin-right: 32px;
+      }
+    }
 
     &:nth-child(-n + 3) {
       margin-right: 24px;
+      @include mq(desk) {
+        margin-right: 32px;
+      }
     }
     &:not(:nth-child(3n)) {
       margin-bottom: 24px;
+      @include mq(desk) {
+        margin-bottom: 0;
+      }
     }
   }
   &__link {
@@ -121,6 +182,9 @@
     font-size: 14px;
     line-height: 1.57;
     color: #434343;
+    @include mq(desk) {
+      line-height: 1.4;
+    }
   }
 }
 
@@ -128,6 +192,9 @@
 .bottom {
   position: relative;
   padding-top: 32px;
+  @include mq(desk) {
+    padding-top: 24px;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -148,9 +215,23 @@
     color: #515151;
 
     margin-bottom: 24px;
+    @include mq(desk) {
+      line-height: 1.4;
+    }
+  }
+  &__list {
+    @include mq(desk) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &__item:not(:last-child) {
     margin-bottom: 24px;
+    @include mq(desk) {
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
   }
   &__link {
     font-weight: 400;
@@ -158,6 +239,9 @@
     line-height: 1.57;
     text-align: center;
     color: #919191;
+    @include mq(desk) {
+      line-height: 1.4;
+    }
   }
 }
 
@@ -165,5 +249,7 @@
   @include mq(desk) {
     display: flex;
     justify-content: space-between;
+
+    margin-bottom: 66px;
   }
 }
