@@ -5,9 +5,10 @@ import TopSectionTitle from '../TopSectionTitle/TopSectionTitle';
 import NavNews from '../NavNews/NavNews';
 import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
 import ListNewsWithImg from '../ListNewsWithImg/ListNewsWithImg';
-import s from './Economica.module.scss';
 import ListNews from '../ListNews/ListNews';
 import List3News from '../List3News/List3News';
+
+import s from './Economica.module.scss';
 
 const Economica = () => {
   const [filter, setFilter] = useState('news'); // news, articles

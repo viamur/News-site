@@ -2,11 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { heroSlider } from '../../utils/utils';
 import { useDeskScreen } from '../../utils/useMediaQuery';
-import Container from '../Container/Container';
+import Container from '../../components/Container/Container';
 
 // Import styles
 import 'swiper/css';
-import sprite from '../../images/icon/sprite.svg';
 import icon from '../../images/icon/hero/angle.svg';
 import s from './Hero.module.scss';
 

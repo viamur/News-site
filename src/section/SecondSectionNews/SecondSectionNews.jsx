@@ -1,4 +1,3 @@
-import BetweenSection from '../../components/BetweenSection/BetweenSection';
 import Kolonki from '../../components/Colonki/Colonki';
 import Economica from '../../components/Economica/Economica';
 import Lifestyle from '../../components/Lifestyle/Lifestyle';

@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
 import { regionNews } from '../../utils/utils';
 import { useDeskScreen } from '../../utils/useMediaQuery';
 import { getDayAndMonth, getOnlyTime } from '../../utils/convertDate';
-import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
 
 import s from './Regions.module.scss';
 

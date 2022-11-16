@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
-
-import Container from '../Container/Container';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+import Container from '../../components/Container/Container';
 import { menu, region, headerSoc } from '../../utils/utils';
 import { useDeskScreen } from '../../utils/useMediaQuery';
 
@@ -50,6 +50,7 @@ const Header = () => {
             <div className={s.top__left}>
               <button type="button" aria-label="menu" className={s.menuBtn}>
                 <svg className={s.svgBtnMenu} width={15} height={8}>
+                  {/* eslint-disable-next-line */}
                   <use href={sprite + '#icon-' + 'burger'}></use>
                 </svg>
                 Меню
@@ -87,6 +88,7 @@ const Header = () => {
                   onClick={hadleSearch}
                 >
                   <svg className={s.svgBtnSearch} width={16} height={16}>
+                    {/* eslint-disable-next-line */}
                     <use href={sprite + '#icon-' + 'search'}></use>
                   </svg>
                 </button>
@@ -116,6 +118,7 @@ const Header = () => {
                   {lang === 'UA' ? 'UA' : 'EN'}
                   {!isDesk && (
                     <svg className={s.langBlock__svg} width={10} height={6}>
+                      {/* eslint-disable-next-line */}
                       <use href={sprite + '#icon-' + 'select'}></use>
                     </svg>
                   )}

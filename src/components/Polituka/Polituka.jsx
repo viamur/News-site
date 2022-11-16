@@ -1,16 +1,14 @@
 import { useEffect, useState } from 'react';
-
-import Container from '../Container/Container';
-import { politika } from '../../utils/utils';
-import { useDeskScreen } from '../../utils/useMediaQuery';
 import ListNews from '../ListNews/ListNews';
-import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
-
-import s from './Polituka.module.scss';
-
 import NavNews from '../NavNews/NavNews';
 import TopSectionTitle from '../TopSectionTitle/TopSectionTitle';
 import List3News from '../List3News/List3News';
+import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
+import { useDeskScreen } from '../../utils/useMediaQuery';
+import { politika } from '../../utils/utils';
+
+import s from './Polituka.module.scss';
+
 
 const Polituka = () => {
   const [filter, setFilter] = useState('news'); // news, articles

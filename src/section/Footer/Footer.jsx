@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { footerMenu, footerNewsCompanyMenu, socList } from '../../utils/utils';
 import { useDeskScreen } from '../../utils/useMediaQuery';
-import Container from '../Container/Container';
+import Container from '../../components/Container/Container';
 
 // @mui
 import Accordion from '@mui/material/Accordion';

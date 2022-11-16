@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
-import Container from '../Container/Container';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { promoSlider } from '../../utils/utils';
 import { useDeskScreen } from '../../utils/useMediaQuery';
 import { getDate } from '../../utils/convertDate';

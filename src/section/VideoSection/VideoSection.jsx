@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
+import chunk from 'chunk';
+import Container from '../../components/Container/Container';
+import MoreNewsBtn from '../../components/MoreNewsBtn/MoreNewsBtn';
 import { videoBlock } from '../../utils/utils';
 import { useDeskScreen } from '../../utils/useMediaQuery';
 import { getDate } from '../../utils/convertDate';
-import chunk from 'chunk';
-import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
 
 import sprite from '../../images/icon/sprite.svg';
 import s from './VideoSection.module.scss';
@@ -63,6 +63,7 @@ const VideoSection = () => {
                 <div className={s.item__top}>
                   <img src={el.imgURL} alt={el.title} className={s.img} />
                   <svg className={s.svg} width={20} height={20}>
+                    {/* eslint-disable-next-line */}
                     <use href={sprite + '#icon-' + 'video'}></use>
                   </svg>
                 </div>

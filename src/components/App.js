@@ -1,19 +1,10 @@
-import Header from './Header/Header';
-import InfoWar from './InfoWar/InfoWar';
-import Hero from './Hero/Hero';
-import AllNews from './AllNews/AllNews';
-import ChoiceRedaction from './ChoiceRedaction/ChoiceRedaction';
-import Regions from './Regions/Regions';
-import VideoSection from './VideoSection/VideoSection';
-import Kolonki from './Colonki/Colonki';
-import Polituka from './Polituka/Polituka';
-import BetweenSection from './BetweenSection/BetweenSection';
-import Promo from './Promo/Promo';
-import Economica from './Economica/Economica';
-import Lifestyle from './Lifestyle/Lifestyle';
+import Header from '../section/Header/Header';
+import InfoWar from '../section/InfoWar/InfoWar';
+import Hero from '../section/Hero/Hero';
+import VideoSection from '../section/VideoSection/VideoSection';
 import FirstSectionNews from '../section/FirstSectionNews/FirstSectionNews';
 import SecondSectionNews from '../section/SecondSectionNews/SecondSectionNews';
-import Footer from './Footer/Footer';
+import Footer from '../section/Footer/Footer';
 
 import './App.scss';
 

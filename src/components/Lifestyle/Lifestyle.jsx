@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
-import Container from '../Container/Container';
 import MoreNewsBtn from '../MoreNewsBtn/MoreNewsBtn';
 import NavNews from '../NavNews/NavNews';
 import TopSectionTitle from '../TopSectionTitle/TopSectionTitle';
 import ListNews from '../ListNews/ListNews';
 import { lifeStyle } from '../../utils/utils';
 import { useDeskScreen } from '../../utils/useMediaQuery';
+import List3News from '../List3News/List3News';
 
 import s from './Lifestyle.module.scss';
-import List3News from '../List3News/List3News';
 
 const Lifestyle = () => {
   const [filter, setFilter] = useState('news'); // news, articles

@@ -9,7 +9,8 @@ const MoreNewsBtn = ({ title, style }) => {
       {title}
       <span className={s.bottom__span}>
         <svg className={s.bottom__svg} width={16} height={16}>
-          <use href={sprite + '#icon-' + 'arrowright'}></use>
+          {/* eslint-disable-next-line */}
+          <use href={sprite + '#icon-' + 'arrowright '}></use>
         </svg>
       </span>
     </Link>

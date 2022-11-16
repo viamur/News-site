@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import chunk from 'chunk';
-import Container from '../Container/Container';
 
 import { choiceRedactors } from '../../utils/utils';
 import { useDeskScreen } from '../../utils/useMediaQuery';

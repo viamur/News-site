@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Container from '../Container/Container';
-import BtnLoadMore from '../BtnLoadMore/BtnLoadMore';
-import { allNews } from '../../utils/utils';
 import chunk from 'chunk';
+import BtnLoadMore from '../BtnLoadMore/BtnLoadMore';
+import ListNews from '../ListNews/ListNews';
+import { allNews } from '../../utils/utils';
 
 import s from './AllNews.module.scss';
-import ListNews from '../ListNews/ListNews';
 
 /* Количество отображаемых новостей */
 const quantity = 10;
@@ -47,46 +46,48 @@ const AllNews = () => {
   };
   return (
     <div id="news" className={s.section}>
-      <div className={s.top}>
-        <h2 className={s.top__title}>Всі новини</h2>
-        <Link className={s.top__link}>Архiв</Link>
+      <div className={s.container}>
+        <div className={s.top}>
+          <h2 className={s.top__title}>Всі новини</h2>
+          <Link className={s.top__link}>Архiв</Link>
+        </div>
+        <ul className={s.nav}>
+          <li className={s.nav__item}>
+            <button
+              type="button"
+              name="all"
+              onClick={handleChangeFilter}
+              className={filter === 'all' ? s.nav__btnActive : s.nav__btn}
+            >
+              Всі
+            </button>
+          </li>
+          <li className={s.nav__item}>
+            <button
+              type="button"
+              name="news"
+              onClick={handleChangeFilter}
+              className={filter === 'news' ? s.nav__btnActive : s.nav__btn}
+            >
+              Новини
+            </button>
+          </li>
+          <li className={s.nav__item}>
+            <button
+              type="button"
+              name="articles"
+              onClick={handleChangeFilter}
+              className={filter === 'articles' ? s.nav__btnActive : s.nav__btn}
+            >
+              Статті
+            </button>
+          </li>
+        </ul>
+        <div className={s.wrapListNews}>
+          <ListNews data={news} />
+        </div>
+        {chunkData.length !== page && <BtnLoadMore handleUpdateNews={handleUpdateNews} />}
       </div>
-      <ul className={s.nav}>
-        <li className={s.nav__item}>
-          <button
-            type="button"
-            name="all"
-            onClick={handleChangeFilter}
-            className={filter === 'all' ? s.nav__btnActive : s.nav__btn}
-          >
-            Всі
-          </button>
-        </li>
-        <li className={s.nav__item}>
-          <button
-            type="button"
-            name="news"
-            onClick={handleChangeFilter}
-            className={filter === 'news' ? s.nav__btnActive : s.nav__btn}
-          >
-            Новини
-          </button>
-        </li>
-        <li className={s.nav__item}>
-          <button
-            type="button"
-            name="articles"
-            onClick={handleChangeFilter}
-            className={filter === 'articles' ? s.nav__btnActive : s.nav__btn}
-          >
-            Статті
-          </button>
-        </li>
-      </ul>
-      <div className={s.wrapListNews}>
-        <ListNews data={news} />
-      </div>
-      {chunkData.length !== page && <BtnLoadMore handleUpdateNews={handleUpdateNews} />}
     </div>
   );
 };

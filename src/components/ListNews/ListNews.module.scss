@@ -36,12 +36,14 @@
     fill: #979ea9;
   }
   &__title {
+    font-family: 'TT Severs Medium';
     font-weight: 500;
     font-size: 14px;
     line-height: 1.21;
     color: #979ea9;
   }
   &__titleColor {
+    font-family: 'TT Severs Medium';
     font-weight: 500;
     font-size: 14px;
     line-height: 1.21;
@@ -50,12 +52,14 @@
 }
 
 .news {
+  font-family: 'TT Severs Medium';
   font-weight: 500;
   font-size: 16px;
   line-height: 1.38;
 
   color: var(--primary-blue);
   &__accent {
+    font-family: 'TT Severs DemiBold';
     font-weight: 600;
     font-size: 16px;
     line-height: 1.38;
