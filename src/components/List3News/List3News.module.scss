@@ -1,0 +1,87 @@
+@import '../../sass/mixin';
+.img {
+  height: 171px;
+  width: 100%;
+  object-fit: cover;
+
+  margin-bottom: 16px;
+}
+.wrap {
+  display: flex;
+  align-items: baseline;
+
+  margin-bottom: 10px;
+}
+.time {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  color: #707070;
+}
+.accent__svg {
+  position: relative;
+  top: 4px;
+  margin-left: 16px;
+}
+.accent__title {
+  margin-left: 12px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: #979ea9;
+}
+.accent__titleColor {
+  margin-left: 12px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: var(--primary-orange);
+}
+.news__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.3;
+
+  color: var(--primary-blue);
+}
+
+@include mq(desk) {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 40px 32px;
+    grid-template-areas:
+      'itemA itemA'
+      'itemB itemC';
+
+    width: 640px;
+    flex-shrink: 0;
+    margin-right: 32px;
+  }
+  .item:nth-child(1) {
+    grid-area: itemA;
+    & img {
+      height: 360px;
+    }
+    & a {
+      font-size: 24px;
+      line-height: 1.4;
+    }
+  }
+  .item:nth-child(2) {
+    grid-area: itemB;
+  }
+  .item:nth-child(3) {
+    grid-area: itemC;
+  }
+  .news__title {
+    font-size: 16px;
+  }
+}

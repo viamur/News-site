@@ -3,7 +3,7 @@ import imgHero1 from '../images/hero/1.png';
 import imgHero2 from '../images/hero/2.png';
 import imgHero3 from '../images/hero/3.png';
 
-import choiceRedactors1 from '../images/news/all.png';
+import choiceRedactors1 from '../images/news/all.jpg';
 import choiceRedactors2 from '../images/news/borch.png';
 
 import imgVideo1 from '../images/video/1.png';
@@ -699,7 +699,7 @@ export const politika = [
     time: '2022/08/05 14:58:00',
     category: 'news',
     accentcolor: false,
-    imgURL: '',
+    img: choiceRedactors1,
     path: '/',
     accent: null,
   },
@@ -709,7 +709,7 @@ export const politika = [
     time: '2022/08/05 14:58:00',
     category: 'news',
     accentcolor: false,
-    imgURL: '',
+    img: choiceRedactors1,
     path: '/',
     accent: null,
   },
@@ -719,7 +719,7 @@ export const politika = [
     time: '2022/08/05 14:58:00',
     category: 'news',
     accentcolor: false,
-    imgURL: '',
+    img: choiceRedactors1,
     path: '/',
     accent: null,
   },
@@ -729,12 +729,12 @@ export const politika = [
     time: '2022/08/05 14:59:00',
     category: 'news',
     accentcolor: true,
+    img: choiceRedactors1,
     accent: {
       title: 'Термінова новина',
       icon: 'fire',
       accentcolor: true,
     },
-    imgURL: '',
     path: '/',
   },
   {
@@ -743,7 +743,7 @@ export const politika = [
     time: '2022/08/05 14:59:00',
     category: 'news',
     accentcolor: false,
-    imgURL: '',
+    img: choiceRedactors1,
     path: '/',
     accent: null,
   },
@@ -753,7 +753,7 @@ export const politika = [
     time: '2022/08/05 14:58:00',
     category: 'articles',
     accentcolor: false,
-    imgURL: '',
+    img: choiceRedactors1,
     path: '/',
     accent: {
       title: 'Новина з відео',
@@ -768,7 +768,7 @@ export const politika = [
     time: '2022/08/05 14:58:00',
     category: 'articles',
     accentcolor: false,
-    imgURL: '',
+    img: choiceRedactors1,
     path: '/',
     accent: null,
   },
@@ -780,7 +780,7 @@ export const politika = [
     time: '2022/08/05 14:58:00',
     category: 'news',
     accentcolor: false,
-    imgURL: '',
+    img: choiceRedactors1,
     path: '/',
     accent: null,
   },
@@ -790,7 +790,7 @@ export const politika = [
     time: '2022/08/05 14:59:00',
     category: 'news',
     accentcolor: false,
-    imgURL: '',
+    img: choiceRedactors1,
     path: '/',
     accent: null,
   },
@@ -800,7 +800,7 @@ export const politika = [
     time: '2022/08/05 14:59:00',
     category: 'news',
     accentcolor: false,
-    imgURL: '',
+    img: choiceRedactors1,
     path: '/',
     accent: null,
   },
@@ -811,7 +811,7 @@ export const promoSlider = [
   {
     id: 1,
     title: 'Акція! Телевізори Samsung з вигодою та в оплату частинами до 12 платежів',
-    imgURL: imgPromoDemo,
+    img: imgPromoDemo,
     path: '/',
     date: '2022/08/05 11:00:00',
     accent: {
@@ -929,7 +929,7 @@ export const ecomica = [
     accent: {
       title: 'Інтерв’ю',
       icon: 'microphone',
-      accentColor: false,
+      accentcolor: false,
     },
   },
   {
@@ -951,11 +951,12 @@ export const ecomica = [
     time: '2022/08/05 11:00:00',
     category: 'articles',
     img: choiceRedactors1,
+    accentcolor: true,
     path: '/',
     accent: {
-      title: 'Інтерв’ю',
-      icon: 'microphone',
-      accentColor: false,
+      title: 'Онлайн',
+      icon: 'online',
+      accentcolor: true,
     },
   },
 
@@ -969,7 +970,7 @@ export const ecomica = [
     accent: {
       title: 'Інтерв’ю',
       icon: 'microphone',
-      accentColor: false,
+      accentcolor: false,
     },
   },
   {
@@ -982,7 +983,7 @@ export const ecomica = [
     accent: {
       title: 'Інтерв’ю',
       icon: 'microphone',
-      accentColor: false,
+      accentcolor: false,
     },
   },
   {
@@ -995,7 +996,7 @@ export const ecomica = [
     accent: {
       title: 'Інтерв’ю',
       icon: 'microphone',
-      accentColor: false,
+      accentcolor: false,
     },
   },
 ];
@@ -1029,7 +1030,7 @@ export const lifeStyle = [
     title: 'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи',
     time: '2022/08/05 14:59:00',
     category: 'news',
-    img: null,
+    img: imgLifeStyle4,
     path: '/',
     accent: null,
   },
@@ -1038,7 +1039,7 @@ export const lifeStyle = [
     title: 'Що подивитися ввечері: топ-5 українських фільмів',
     time: '2022/08/05 14:59:00',
     category: 'news',
-    img: imgLifeStyle3,
+    img: false,
     path: '/',
     accent: null,
   },

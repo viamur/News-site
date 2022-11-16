@@ -7,7 +7,7 @@
     position: relative;
     max-height: 1263px;
 
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 .item {
@@ -32,6 +32,8 @@
 
     position: relative;
     top: -1px;
+
+    fill: #979ea9;
   }
   &__title {
     font-weight: 500;

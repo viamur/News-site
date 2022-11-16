@@ -1,10 +1,19 @@
 @import '../../sass/mixin';
-
 .section {
-  padding: 56px 24px;
-
-  margin: 0 auto;
+  padding: 56px 0;
   margin-bottom: 24px;
+
+  background-color: var(--white);
+  @include mq(desk) {
+    padding-top: 24px;
+    padding-bottom: 32px;
+
+    border-radius: 12px;
+  }
+}
+.container {
+  margin: 0 auto;
+  padding: 0 24px;
 
   max-width: 100%;
 
@@ -13,6 +22,18 @@
   }
   @include mq(desk) {
     width: auto;
+    padding: 0 32px;
   }
-  background-color: var(--white);
+}
+.wrapper {
+  display: flex;
+}
+.listNewsTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #515151;
+
+  margin-bottom: 32px;
 }

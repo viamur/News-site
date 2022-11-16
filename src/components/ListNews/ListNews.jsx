@@ -4,7 +4,7 @@ import { getOnlyTime } from '../../utils/convertDate';
 import sprite from '../../images/icon/sprite.svg';
 import s from './ListNews.module.scss';
 
-const ListNews = ({ data = [] }) => {
+const ListNews = ({ data = [], img = false }) => {
   return (
     <ul className={s.list}>
       {data.map(el => {
@@ -28,7 +28,7 @@ const ListNews = ({ data = [] }) => {
                   {el.title}
                 </Link>
               </h3>
-              {el.img && (
+              {el.img && img && (
                 <img src={el.img} alt={el.title} className={s.img} height={72} width={72} />
               )}
             </div>
