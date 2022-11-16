@@ -1,8 +1,13 @@
+@import '../../sass/mixin';
+
 .footer {
   padding-top: 24px;
   padding-bottom: 32px;
 
   background-color: var(--grey-bg);
+  @include mq(desk) {
+    padding-top: 56px;
+  }
 }
 .accordion {
   background-color: transparent !important;
@@ -18,6 +23,12 @@
 }
 .list {
   margin-bottom: 40px;
+  @include mq(desk) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 487px;
+  }
 }
 .item {
   border-bottom: 1px solid #dedfe0;
@@ -147,5 +158,12 @@
     line-height: 1.57;
     text-align: center;
     color: #919191;
+  }
+}
+
+.wrapTop {
+  @include mq(desk) {
+    display: flex;
+    justify-content: space-between;
   }
 }
