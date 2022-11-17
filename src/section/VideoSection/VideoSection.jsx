@@ -35,13 +35,12 @@ const VideoSection = () => {
 
   const style = isDesk
     ? {
-        background: `linear-gradient(180deg, rgba(21, 35, 56, 0.5) 0%, rgba(24, 40, 64, 0.95) 100%), url(${news[0]?.imgURL})`,
-        backgroundSize: 'cover',
+        background: `linear-gradient(180deg, rgba(21, 35, 56, 0.5) 0%, rgba(24, 40, 64, 0.95) 100%), center / cover no-repeat url(${news[0]?.imgURL})`,
       }
     : null;
 
   return (
-    <section className={s.section} style={style}>
+    <section className={s.section} style={style} id="poglyd">
       <Container>
         <div className={s.top}>
           <h2 className={s.title}>Відео</h2>
@@ -61,7 +60,7 @@ const VideoSection = () => {
             return (
               <li key={el.id} className={s.item}>
                 <div className={s.item__top}>
-                  <img src={el.imgURL} alt={el.title} className={s.img} />
+                  <img src={el.imgURL} alt={el.title} className={s.img} height={171} width={327} />
                   <svg className={s.svg} width={20} height={20}>
                     {/* eslint-disable-next-line */}
                     <use href={sprite + '#icon-' + 'video'}></use>

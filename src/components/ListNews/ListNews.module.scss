@@ -5,9 +5,22 @@
 
   @include mq(desk) {
     position: relative;
-    max-height: 1263px;
+    max-height: 1341px;
 
     overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--primary-orange);
+      border-radius: 2px;
+    }
   }
 }
 .item {

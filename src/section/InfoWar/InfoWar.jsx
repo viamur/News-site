@@ -26,7 +26,7 @@ const icon = {
 
 const InfoWar = () => {
   return (
-    <section className={s.section}>
+    <section className={s.section} id={'war'}>
       <div className={s.wrap}>
         <div className={s.leftInfo}>
           <p className={s.dayWar}>{infoWar.day} день війни:</p>

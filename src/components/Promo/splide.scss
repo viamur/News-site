@@ -4,22 +4,13 @@
 .splide__arrow.splide__arrow--next {
   right: 0;
   opacity: 1 !important;
-
-  //   background-color: var(--white);
-  //   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.24);
-
-  //   width: 48px;
-  //   height: 48px;
-
-  //   border-radius: 50%;
-  //   z-index: 10;
 }
 .splide__arrow--next::before {
   content: '';
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
+  right: -2px;
 
   z-index: -10;
   display: block;
@@ -36,15 +27,14 @@
 .splide__arrow--next::after {
   content: '';
   position: absolute;
-  top: 0;
+  top: 50%;
   transform: translateY(-50%);
   right: 0;
 
   background-color: var(--white);
-  background-image: url('../../images/icon/accordion.svg');
+  background-image: url('../../images/icon/angleright.svg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  transform: rotate(-90deg);
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.24);
 
   width: 48px;

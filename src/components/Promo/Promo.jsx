@@ -60,7 +60,7 @@ const Promo = () => {
           className={s.slider}
           options={{
             rewind: false,
-            width: isDesk ? '90%' : '375px',
+            width: isDesk ? '95%' : '375px',
             gap: isDesk ? '32px' : '24px',
             autoWidth: true,
             pagination: false,

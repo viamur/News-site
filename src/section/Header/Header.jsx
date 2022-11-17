@@ -6,7 +6,7 @@ import Container from '../../components/Container/Container';
 import { menu, region, headerSoc } from '../../utils/utils';
 import { useDeskScreen } from '../../utils/useMediaQuery';
 
-// Import Swiper styles
+// Import Swiper s tyles
 import 'swiper/css';
 import './styleForSwiper.css';
 // scss
@@ -60,7 +60,7 @@ const Header = () => {
                   {region.map(el => {
                     return (
                       <li key={el.name} className={s.region__item}>
-                        <Link to={el.path} className={s.region__link}>
+                        <Link to={'suspilstvo'} className={s.region__link}>
                           {el.name}
                         </Link>
                       </li>
@@ -173,7 +173,7 @@ const Header = () => {
           </div>
         </Swiper>
         {isDesk && (
-          <Link className={s.live}>
+          <Link className={s.live} to="poglyd">
             <span className={s.live__spanA}>
               <span className={s.live__spanB}></span>
             </span>

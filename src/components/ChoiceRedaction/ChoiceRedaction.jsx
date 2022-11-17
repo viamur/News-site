@@ -35,7 +35,7 @@ const ChoiceRedaction = () => {
     setPage(prev => prev + 1);
   };
   return (
-    <div className={s.section}>
+    <div className={s.section} id="svit">
       <h2 className={s.title}>Вибір редакції</h2>
       <ListNewsWithImg news={news} />
 

@@ -11,7 +11,7 @@ const ListNewsWithImg = ({ news }) => {
         const time = getDate(el.time);
         return (
           <li key={el.id} className={s.item}>
-            <img src={el.img} alt={el.title} className={s.img} />
+            <img src={el.img} alt={el.title} className={s.img} height={184} width={327} />
             <div className={s.wrap}>
               <p className={s.time}>{time}</p>
               {el.accent && (

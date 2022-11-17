@@ -9,7 +9,6 @@ import { politika } from '../../utils/utils';
 
 import s from './Polituka.module.scss';
 
-
 const Polituka = () => {
   const [filter, setFilter] = useState('news'); // news, articles
   const [news, setNews] = useState([]);
@@ -24,7 +23,7 @@ const Polituka = () => {
   }, [filter, isDesk]);
 
   return (
-    <section className={s.section}>
+    <section className={s.section} id="politika">
       <div className={s.container}>
         <TopSectionTitle title={'Політика'} textLink={'Всі новини розділу'} />
         {!isDesk && <NavNews filter={filter} setFilter={setFilter} />}

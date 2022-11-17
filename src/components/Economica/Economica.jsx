@@ -24,7 +24,7 @@ const Economica = () => {
   }, [filter, isDesk]);
 
   return (
-    <section className={s.section}>
+    <section className={s.section} id="economica">
       <div className={s.container}>
         <TopSectionTitle title={'Економіка'} textLink={'Всі новини розділу'} />
         {!isDesk && <NavNews filter={filter} setFilter={setFilter} />}

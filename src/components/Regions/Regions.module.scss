@@ -4,8 +4,13 @@
   max-width: 100%;
   overflow: hidden;
 
-  padding: 40px 24px;
+  padding: 40px 0px;
+
+  background-color: var(--grey-bg);
+}
+.container {
   margin: 0 auto;
+  padding: 0 24px;
 
   @include mq(mob) {
     width: 375px;
@@ -14,7 +19,6 @@
     width: auto;
     padding: 0;
   }
-  background-color: var(--grey-bg);
 }
 .top {
   display: flex;
@@ -49,7 +53,6 @@
 
 .list {
   display: flex;
-
   margin-bottom: 24px;
 
   &__item:not(:last-child) {
@@ -90,6 +93,14 @@
     scroll-padding: 0px 1.25rem;
 
     margin: 0 auto;
+
+    width: 375px;
+    padding-left: 24px;
+
+    @include mq(desk) {
+      width: auto;
+      padding-left: 0;
+    }
     &::-webkit-scrollbar {
       width: 0;
     }
