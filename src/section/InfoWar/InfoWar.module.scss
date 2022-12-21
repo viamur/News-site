@@ -13,8 +13,11 @@
   width: 372px;
   margin: 0 auto;
   @include mq(desk) {
-    width: 1440px;
-    padding: 0 64px;
+    // width: 1440px;
+    // padding: 0 64px;
+
+    width: 1297px;
+    padding: 0;
   }
 }
 

@@ -110,7 +110,9 @@
 
   padding-left: 24px;
   @include mq(desk) {
-    width: 1440px;
-    padding: 0 64px;
+    // width: 1440px;
+    // padding: 0 64px;
+    width: 1297px;
+    padding: 0px;
   }
 }

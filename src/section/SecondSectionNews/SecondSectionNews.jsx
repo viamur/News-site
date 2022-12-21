@@ -11,7 +11,7 @@ const SecondSectionNews = () => {
     <section className={s.section}>
       <div className={s.container}>
         <Kolonki />
-        <div>
+        <div className={s.wrap}>
           <Polituka />
           <Promo />
           <Economica />
